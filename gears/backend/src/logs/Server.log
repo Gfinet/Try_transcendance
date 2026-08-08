@@ -8488,3 +8488,88 @@ Argument `deviceId`: Invalid value provided. Expected Int, provided String.
 [09/08/2026 00:39:05] Parents GET /clim/status
 [09/08/2026 00:39:05] FASTIFY: incoming request
 [09/08/2026 00:39:05] FASTIFY: request completed
+[09/08/2026 00:39:08] FASTIFY: request completed
+[09/08/2026 00:39:16] FASTIFY: incoming request
+[09/08/2026 00:39:16] Parents GET /clim/status
+[09/08/2026 00:39:19] FASTIFY: request completed
+[09/08/2026 00:39:20] FASTIFY: incoming request
+[09/08/2026 00:39:20] Parents GET /clim/status
+[09/08/2026 00:39:22] FASTIFY: request completed
+[09/08/2026 00:39:26] FASTIFY: incoming request
+[09/08/2026 00:39:26] Parents GET /clim/status
+[09/08/2026 00:39:28] FASTIFY: request completed
+[09/08/2026 00:39:36] FASTIFY: incoming request
+[09/08/2026 00:39:36] Parents GET /clim/status
+[09/08/2026 00:39:38] FASTIFY: request completed
+[09/08/2026 00:39:44] FASTIFY: incoming request
+[09/08/2026 00:39:44] FASTIFY: incoming request
+[09/08/2026 00:39:44] Parents GET /clim/status
+[09/08/2026 00:39:44] FASTIFY: request completed
+[09/08/2026 00:39:46] FASTIFY: incoming request
+[09/08/2026 00:39:46] Parents GET /clim/status
+[09/08/2026 00:39:49] FASTIFY: request completed
+[09/08/2026 00:39:50] FASTIFY: Stopping Solar's_Cam platform
+[09/08/2026 00:39:50] FASTIFY: err is not defined
+[09/08/2026 00:39:50] FASTIFY: request completed
+[09/08/2026 00:39:50] FASTIFY: Solar's_Cam platform stopped
+[09/08/2026 00:39:51] Weather : Already got data
+[09/08/2026 00:39:51] FASTIFY: Server listening at http://127.0.0.1:3000
+[09/08/2026 00:39:51] FASTIFY: Server listening at http://172.24.0.5:3000
+[09/08/2026 00:39:54] FASTIFY: incoming request
+[09/08/2026 00:39:54] FASTIFY: request completed
+[09/08/2026 00:39:54] Clim connectée: 31885837213310 | temp: 23.5 °C
+[09/08/2026 00:40:00] SID null
+[09/08/2026 00:40:01] SID uKzAbR82Nwi2rRcL
+[09/08/2026 00:40:19] FASTIFY: incoming request
+[09/08/2026 00:40:19] Parents GET /clim/status
+[09/08/2026 00:40:21] FASTIFY: request completed
+[09/08/2026 00:40:46] FASTIFY: incoming request
+[09/08/2026 00:40:46] FASTIFY: incoming request
+[09/08/2026 00:40:46] Parents GET /clim/status
+[09/08/2026 00:40:46] FASTIFY: request completed
+[09/08/2026 00:40:49] FASTIFY: request completed
+[09/08/2026 00:40:57] FASTIFY: incoming request
+[09/08/2026 00:40:57] Parents GET /clim/status
+[09/08/2026 00:40:59] FASTIFY: request completed
+[09/08/2026 00:45:00] SID uKzAbR82Nwi2rRcL
+[09/08/2026 00:45:01] SID Vcotc-36svu6a9n6
+[09/08/2026 00:46:13] FASTIFY: incoming request
+[09/08/2026 00:46:13] Parents GET /clim/status
+[09/08/2026 00:46:13] FASTIFY: incoming request
+[09/08/2026 00:46:13] FASTIFY: request completed
+[09/08/2026 00:46:15] FASTIFY: request completed
+[09/08/2026 00:46:30] FASTIFY: incoming request
+[09/08/2026 00:46:30] FASTIFY: incoming request
+[09/08/2026 00:46:30] Parents GET /clim/status
+[09/08/2026 00:46:30] FASTIFY: request completed
+[09/08/2026 00:46:33] FASTIFY: request completed
+[09/08/2026 00:46:41] FASTIFY: incoming request
+[09/08/2026 00:46:41] Parents GET /clim/status
+[09/08/2026 00:46:44] FASTIFY: request completed
+[09/08/2026 00:46:51] FASTIFY: incoming request
+[09/08/2026 00:46:51] Parents GET /clim/status
+[09/08/2026 00:46:54] FASTIFY: request completed
+[09/08/2026 00:47:01] FASTIFY: incoming request
+[09/08/2026 00:47:01] Parents GET /clim/status
+[09/08/2026 00:47:03] FASTIFY: request completed
+[09/08/2026 00:47:07] FASTIFY: incoming request
+[09/08/2026 00:47:07] FASTIFY: incoming request
+[09/08/2026 00:47:07] Parents GET /clim/status
+[09/08/2026 00:47:07] FASTIFY: request completed
+[09/08/2026 00:47:10] FASTIFY: request completed
+[09/08/2026 00:47:18] FASTIFY: incoming request
+[09/08/2026 00:47:18] Parents GET /clim/status
+[09/08/2026 00:47:20] FASTIFY: request completed
+[09/08/2026 00:47:25] FASTIFY: incoming request
+[09/08/2026 00:47:25] Parents GET /mbtoday
+[09/08/2026 00:47:25] FASTIFY: incoming request
+[09/08/2026 00:47:25] FASTIFY: request completed
+[09/08/2026 00:47:25] FASTIFY: request completed
+[09/08/2026 00:47:48] FASTIFY: incoming request
+[09/08/2026 00:47:48] FASTIFY: incoming request
+[09/08/2026 00:47:48] Parents GET /clim/status
+[09/08/2026 00:47:48] FASTIFY: request completed
+[09/08/2026 00:47:55] FASTIFY: request completed
+[09/08/2026 00:47:59] FASTIFY: incoming request
+[09/08/2026 00:47:59] Parents GET /clim/status
+[09/08/2026 00:48:01] FASTIFY: request completed

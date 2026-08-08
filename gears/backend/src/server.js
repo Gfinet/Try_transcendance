@@ -124,17 +124,14 @@ const serverOn = async () => {
 		await launchWash(server);
 	}, {scheduled: true, timezone: "Europe/Paris"})
 	repeatTask.start()
-	
-	
 
-	// fetchSolarData()
+
 	const user = await server.prisma.user.findUnique({ where: { username: "Parents" }})
 	if (server.prisma && !user)
 	{
 		const mdp = await bcrypt.hash("chocolat", 12)
 		await server.prisma.User.create({data: {username: "Parents", password_hash: mdp }})
 	}
-
 
 	server.get('/api', function (request, reply) {
 		reply.send({ hello: 'world' })

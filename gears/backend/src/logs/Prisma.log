@@ -5931,3 +5931,51 @@
 [09/08/2026 00:39:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
 [09/08/2026 00:39:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:39:00.067 UTC","En attente",1,0] -Duration: 1ms
 [09/08/2026 00:39:05] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:39:05.743 UTC","2026-08-09 09:39:05.743 UTC",0] -Duration: 4ms
+[09/08/2026 00:39:44] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:39:44.678 UTC","2026-08-09 09:39:44.678 UTC",0] -Duration: 6ms
+[09/08/2026 00:39:51] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 00:00:00 UTC",0] -Duration: 3ms
+[09/08/2026 00:39:51] PRISMA: SELECT "public"."User"."id", "public"."User"."username", "public"."User"."password_hash", "public"." -Params: ["Parents",1,0] -Duration: 1ms
+[09/08/2026 00:40:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:40:00.109 UTC",0] -Duration: 6ms
+[09/08/2026 00:40:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:40:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:40:00.121 UTC","En attente",1,0] -Duration: 2ms
+[09/08/2026 00:40:02] PRISMA: INSERT INTO "public"."Solar_Data" ("hour","Watts","total") VALUES ($1,$2,$3) RETURNING "public"."Sol -Params: ["2026-08-08 22:40:02.419 UTC",0,0] -Duration: 11ms
+[09/08/2026 00:40:46] PRISMA: SELECT 1 -Params: [] -Duration: 5ms
+[09/08/2026 00:40:46] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:40:46.705 UTC","2026-08-09 09:40:46.705 UTC",0] -Duration: 4ms
+[09/08/2026 00:41:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:41:00.032 UTC",0] -Duration: 2ms
+[09/08/2026 00:41:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:41:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:41:00.044 UTC","En attente",1,0] -Duration: 0ms
+[09/08/2026 00:42:00] PRISMA: SELECT 1 -Params: [] -Duration: 3ms
+[09/08/2026 00:42:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:42:00.049 UTC",0] -Duration: 1ms
+[09/08/2026 00:42:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:42:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:42:00.069 UTC","En attente",1,0] -Duration: 0ms
+[09/08/2026 00:43:00] PRISMA: SELECT 1 -Params: [] -Duration: 3ms
+[09/08/2026 00:43:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:43:00.055 UTC",0] -Duration: 1ms
+[09/08/2026 00:43:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:43:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:43:00.070 UTC","En attente",1,0] -Duration: 2ms
+[09/08/2026 00:44:00] PRISMA: SELECT 1 -Params: [] -Duration: 3ms
+[09/08/2026 00:44:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:44:00.068 UTC",0] -Duration: 4ms
+[09/08/2026 00:44:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:44:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:44:00.094 UTC","En attente",1,0] -Duration: 1ms
+[09/08/2026 00:45:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:45:00.063 UTC",0] -Duration: 4ms
+[09/08/2026 00:45:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:45:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:45:00.123 UTC","En attente",1,0] -Duration: 1ms
+[09/08/2026 00:45:01] PRISMA: INSERT INTO "public"."Solar_Data" ("hour","Watts","total") VALUES ($1,$2,$3) RETURNING "public"."Sol -Params: ["2026-08-08 22:45:01.570 UTC",0,0] -Duration: 7ms
+[09/08/2026 00:46:00] PRISMA: SELECT 1 -Params: [] -Duration: 3ms
+[09/08/2026 00:46:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:46:00.042 UTC",0] -Duration: 1ms
+[09/08/2026 00:46:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:46:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:46:00.056 UTC","En attente",1,0] -Duration: 0ms
+[09/08/2026 00:46:13] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:46:13.166 UTC","2026-08-09 09:46:13.166 UTC",0] -Duration: 8ms
+[09/08/2026 00:46:30] PRISMA: SELECT 1 -Params: [] -Duration: 4ms
+[09/08/2026 00:46:30] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:46:30.667 UTC","2026-08-09 09:46:30.667 UTC",0] -Duration: 1ms
+[09/08/2026 00:47:00] PRISMA: SELECT 1 -Params: [] -Duration: 2ms
+[09/08/2026 00:47:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:47:00.040 UTC",0] -Duration: 3ms
+[09/08/2026 00:47:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:47:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:47:00.059 UTC","En attente",1,0] -Duration: 0ms
+[09/08/2026 00:47:07] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:47:07.531 UTC","2026-08-09 09:47:07.531 UTC",0] -Duration: 7ms
+[09/08/2026 00:47:25] PRISMA: SELECT 1 -Params: [] -Duration: 3ms
+[09/08/2026 00:47:25] PRISMA: SELECT "public"."Solar_Data"."id", "public"."Solar_Data"."hour", "public"."Solar_Data"."Watts", "pub -Params: ["2026-08-07 22:47:25.472 UTC","2026-08-08 22:47:25.472 UTC",0] -Duration: 18ms
+[09/08/2026 00:47:25] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:47:25.481 UTC","2026-08-09 09:47:25.481 UTC",0] -Duration: 3ms
+[09/08/2026 00:47:48] PRISMA: SELECT 1 -Params: [] -Duration: 3ms
+[09/08/2026 00:47:48] PRISMA: SELECT "public"."Weather_Forecast"."id", "public"."Weather_Forecast"."time", "public"."Weather_Forec -Params: ["2026-08-08 10:47:48.955 UTC","2026-08-09 09:47:48.955 UTC",0] -Duration: 1ms
+[09/08/2026 00:48:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: ["2026-08-08 22:48:00.028 UTC",0] -Duration: 23ms
+[09/08/2026 00:48:00] PRISMA: SELECT "public"."PushNotif"."id", "public"."PushNotif"."createdAt", "public"."PushNotif"."sendAt", " -Params: [0] -Duration: 0ms
+[09/08/2026 00:48:00] PRISMA: SELECT "public"."Washing_Program"."id", "public"."Washing_Program"."deviceId", "public"."Washing_Pro -Params: ["2026-08-08 22:48:00.068 UTC","En attente",1,0] -Duration: 2ms
