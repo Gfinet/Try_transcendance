@@ -24,6 +24,7 @@ function Dashboard() {
 
   return (
     <div style={{...globalDiv, gap:'0.5rem'}}>
+      <PushButton/>
       <h1 style={{color:'white'}}>Bienvenue sur l'espace Parents</h1>
       <MyBarChart data={temp} valx="time" valy="temperature" color="#fbbf24" unit='°' sep={true} title={"Prévisions météo"}/>
       <ClimPannel data={clim} setClim={setClim} clim={clim}/>
@@ -38,7 +39,7 @@ function Dashboard() {
           {/* <button style={blueButton} onClick={goToSchedule}>Prevoir une machine</button> */}
         </div>
         <button style={{...greyButton, alignSelf: 'center'}} onClick={Logout}>Se Déconnecter</button>
-        <PushButton/>
+
       </div>
     </div>
   );

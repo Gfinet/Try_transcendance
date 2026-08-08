@@ -57,7 +57,7 @@ export function WashTable({devInfo, onAction})
 
 	const sendAction= async (body) => {
 		const token = localStorage.getItem('token');
-		const response = await fetch(`/api/miele/devices/${devId}/programs`, {
+		const response = await fetch(`/api/miele/devices/${devId}/actions`, {
 			method: 'PUT',
 			headers: {
 				'Authorization': `Bearer ${token}`,
@@ -65,7 +65,7 @@ export function WashTable({devInfo, onAction})
       		},
 			body : JSON.stringify(body)
     	})
-		console.log("REsp", response)
+		console.log("Resp", response)
 		onAction();
 	}
 
@@ -73,17 +73,18 @@ export function WashTable({devInfo, onAction})
 	const turnOff = () => {sendAction({"powerOff": true})}
 	const setProgram = async () => {
 		if (selectedProgram == "/") {console.log("No prog");return;}
+		const prgmId = parseInt(selectedProgram,10)
 		let delH = delaiH;
 		let delMin = delaiMin;
 		if (!timeMode)
 		{
 			const minT = computeEndTime();
-			// console.log(minT, endH, endMin)
+			// console.log(minT[0], endH, "-", minT[1], endMin)
 			if (minT[0] * 60 + minT[1] > endH * 60 + endMin) {console.log("impossible time");return;}
 			minT[1] = endMin - minT[1];
 			if (minT[1] < 0)
 			{
-				minT[0]--;
+				minT[0]++;
 				minT[1] += 60;
 			}
 			minT[0] = endH - minT[0];
@@ -93,18 +94,20 @@ export function WashTable({devInfo, onAction})
 		}
 		console.log("prgm", selectedProgram, "in", delH, "h", delMin)
 		const token = localStorage.getItem('token');
-		const response = await fetch(`/api/miele/devices/${devId}/actions`, {
+		const response = await fetch(`/api/miele/devices/${devId}/programs`, {
 			method: 'PUT',
 			headers: {
 				'Authorization': `Bearer ${token}`,
 				'Content-Type': 'application/json'
 			},
 			body : JSON.stringify({
-				"programId" : parseInt(selectedProgram,10), 
-				"startTime": [delH,delMin]
+				"programId" : prgmId, 
+				"startTime": [delH,delMin],
+				"deviceId" : devId,
+				"duration" : Programs[prgmId].duration
 			})
     	})
-		if (response) console.log("RESP", response)
+		if (response) console.log("RESP", await response.json())
 		onAction();
 	}
 
@@ -183,11 +186,11 @@ export function WashTable({devInfo, onAction})
 					{timeMode ? 
 					(<>
 						<NumberStepper value={delaiH}   onChange={setDelaiH}   max={23} step={1} label="H"   />
-						<NumberStepper value={delaiMin} onChange={setDelaiMin} max={59} step={5} label="min" />
+						<NumberStepper value={delaiMin} onChange={setDelaiMin} max={60} step={5} label="min" />
 					</>) : 
 					(<>
 						<NumberStepper value={endH}   onChange={setEndH}   max={23} step={1} label="H"   />
-						<NumberStepper value={endMin} onChange={setEndMin} max={59} step={5} label="min" />
+						<NumberStepper value={endMin} onChange={setEndMin} max={60} step={5} label="min" />
 					</>)}
 				</div>
 				<div style={{justifySelf :'center'}}>

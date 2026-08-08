@@ -1,0 +1,1606 @@
+[07/08/2026 11:43:19] Parents GET /miele/token
+[07/08/2026 11:43:19] Parents POST /wash/list
+[07/08/2026 11:43:19] Parents GET /miele/devices
+[07/08/2026 11:46:49] Parents GET /miele/devices/:deviceId
+[07/08/2026 11:46:49] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 11:46:57] Parents GET /miele/devices/:deviceId
+[07/08/2026 11:46:57] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 11:47:28] Parents PUT /miele/devices/:deviceId/actions
+[07/08/2026 11:47:28] Parents GET /miele/devices/:deviceId
+[07/08/2026 11:47:28] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 11:57:39] Parents GET /miele/token
+[07/08/2026 11:57:39] Parents POST /wash/list
+[07/08/2026 11:57:39] Parents GET /miele/devices
+[07/08/2026 12:18:57] Parents POST /wash/list
+[07/08/2026 12:18:57] Parents GET /miele/token
+[07/08/2026 12:18:57] Parents GET /miele/devices
+[07/08/2026 12:19:01] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:19:01] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:19:21] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:19:23] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:19:23] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:20:46] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:20:46] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:20:51] Parents POST /wash/list
+[07/08/2026 12:20:51] Parents GET /miele/token
+[07/08/2026 12:20:51] Parents GET /miele/devices
+[07/08/2026 12:20:54] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:20:54] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:25:22] Parents POST /wash/list
+[07/08/2026 12:25:22] Parents GET /miele/token
+[07/08/2026 12:25:22] Parents GET /miele/devices
+[07/08/2026 12:25:26] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:25:26] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:25:27] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:25:27] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:26:12] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:26:12] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:26:37] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:26:40] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:26:40] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:27:00] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:27:00] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:27:07] Parents POST /wash/list
+[07/08/2026 12:27:07] Parents GET /miele/token
+[07/08/2026 12:27:07] Parents GET /miele/devices
+[07/08/2026 12:27:09] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:27:09] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:27:11] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:27:11] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:27:14] Parents PUT /miele/devices/:deviceId/actions
+[07/08/2026 12:27:14] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:27:14] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:30:15] Parents GET /miele/token
+[07/08/2026 12:30:15] Parents POST /wash/list
+[07/08/2026 12:30:15] Parents GET /miele/devices
+[07/08/2026 12:30:17] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:30:17] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:30:19] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:30:19] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:30:32] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:30:32] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:30:45] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:30:45] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:30:45 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:30:45] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:30:45] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:31:27] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:31:28] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:31:28 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:31:28] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:31:28] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:31:39] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:31:39] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:31:39 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:31:39] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:31:39] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:34:12] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:34:13] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:34:13 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:34:13] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:34:13] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:34:56] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:34:57] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:34:57 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:34:57] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:34:57] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:36:28] Parents GET /miele/token
+[07/08/2026 12:36:28] Parents POST /wash/list
+[07/08/2026 12:36:28] Parents GET /miele/devices
+[07/08/2026 12:36:45] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:36:45] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:36:55] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:36:56] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:36:56 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:36:56] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:36:56] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:36:58] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:36:59] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:36:59 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:36:59] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:36:59] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:37:01] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:37:02] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:37:02 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:37:02] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:37:02] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:38:22] Parents POST /wash/list
+[07/08/2026 12:38:22] Parents GET /miele/token
+[07/08/2026 12:38:22] Parents GET /miele/devices
+[07/08/2026 12:38:26] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:38:26] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:38:37] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:38:39] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:38:39] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:43:01] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:43:01] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:43:22] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:43:23] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:43:31] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:43:31] BODY {"programId":122,"startTime":[13,0]}
+[07/08/2026 12:43:33] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:43:33] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:46:24] Parents POST /wash/list
+[07/08/2026 12:46:24] Parents GET /miele/token
+[07/08/2026 12:46:24] Parents GET /miele/devices
+[07/08/2026 12:47:28] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:47:28] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:47:43] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:47:43] BODY {"programId":122,"startTime":[13,0]}
+[07/08/2026 12:47:45] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:47:45 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:47:45] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:47:45] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:49:43] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:49:43] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:50:12] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:50:12] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:50:18] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 12:50:18] BODY {"programId":122,"startTime":[1,30]}
+[07/08/2026 12:50:20] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:50:20 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:50:20] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:50:20] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:57:10] Parents POST /wash/list
+[07/08/2026 12:57:10] Parents GET /miele/token
+[07/08/2026 12:57:10] Parents GET /miele/devices
+[07/08/2026 12:57:13] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:57:13] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:57:15] Parents GET /miele/devices/:deviceId
+[07/08/2026 12:57:15] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:58:01] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 12:58:01] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:02:56] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:02:56] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:02:58] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:02:58] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:06:35] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:06:35] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:06:56] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 13:06:56] BODY {"programId":122}
+[07/08/2026 13:06:56] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:06:56 GMT',
+    'content-type': 'application/json',
+    'content-length': '76',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true },
+  bodyUsed: false,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:06:56] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:06:56 GMT',
+    'content-type': 'application/json',
+    'content-length': '76',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:06:56] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:06:56] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:07:12] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 13:07:12] BODY {"programId":122}
+[07/08/2026 13:07:14] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:07:14 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:07:14] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:07:14] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:11:45] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:11:45] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:12:03] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:12:03] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:12:25] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:12:25] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:12:25] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:13:08] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:13:08] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:13:08 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true },
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+}
+[07/08/2026 13:13:08] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:13:08] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:14:46] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:14:46] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:14:46 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+}
+[07/08/2026 13:14:46] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:14:46] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:16:24] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:16:25] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:16:25] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:16:38] Parents POST /wash/list
+[07/08/2026 13:16:38] Parents GET /miele/token
+[07/08/2026 13:16:38] Parents GET /miele/devices
+[07/08/2026 13:16:40] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:16:40] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:16:47] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:16:47] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:16:47] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:18:14] Parents POST /wash/list
+[07/08/2026 13:18:14] Parents GET /miele/token
+[07/08/2026 13:18:14] Parents GET /miele/devices
+[07/08/2026 13:18:16] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:18:16] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:18:20] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:18:20] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:18:20] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:19:29] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:19:29] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:19:29] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:21:09] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:21:10] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:21:10] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:21:57] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:21:58] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:21:58 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+} 
+ {
+  processAction: [],
+  light: [],
+  ambientLight: [],
+  startTime: [],
+  ventilationStep: [],
+  programId: [],
+  targetTemperature: [],
+  deviceName: true,
+  powerOn: false,
+  powerOff: true,
+  colors: [],
+  modes: [],
+  runOnTime: []
+}
+[07/08/2026 13:21:58] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:21:58] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:24:40] Parents GET /miele/devices/:deviceId/actions
+[07/08/2026 13:24:40] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:24:40 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+} 
+ {
+  processAction: [],
+  light: [],
+  ambientLight: [],
+  startTime: [],
+  ventilationStep: [],
+  programId: [],
+  targetTemperature: [],
+  deviceName: true,
+  powerOn: false,
+  powerOff: true,
+  colors: [],
+  modes: [],
+  runOnTime: []
+}
+[07/08/2026 13:24:40] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:24:40] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:32:46] Parents POST /wash/list
+[07/08/2026 13:32:46] Parents GET /miele/token
+[07/08/2026 13:32:47] Parents GET /miele/devices
+[07/08/2026 13:37:18] Parents POST /wash/list
+[07/08/2026 13:37:18] Parents GET /miele/token
+[07/08/2026 13:37:18] Parents GET /miele/devices
+[07/08/2026 13:44:46] Parents GET /miele/token
+[07/08/2026 13:44:46] Parents POST /wash/list
+[07/08/2026 13:44:46] Parents GET /miele/devices
+[07/08/2026 13:45:56] Parents POST /wash/list
+[07/08/2026 13:45:56] Parents GET /miele/token
+[07/08/2026 13:45:56] Parents GET /miele/devices
+[07/08/2026 13:55:01] Parents POST /wash/list
+[07/08/2026 13:55:01] Parents GET /miele/token
+[07/08/2026 13:55:01] Parents GET /miele/devices
+[07/08/2026 13:58:16] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:58:16] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 13:59:00] Parents PUT /miele/devices/:deviceId/programs
+[07/08/2026 13:59:00] BODY {"programId":122,"startTime":5}
+[07/08/2026 13:59:02] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:59:02 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:59:02] Parents GET /miele/devices/:deviceId
+[07/08/2026 13:59:02] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 14:07:19] Parents POST /wash/list
+[07/08/2026 14:07:19] Parents GET /miele/token
+[07/08/2026 14:07:20] Parents GET /miele/devices
+[07/08/2026 14:11:51] Parents GET /miele/token
+[07/08/2026 14:11:51] Parents POST /wash/list
+[07/08/2026 14:11:51] Parents GET /miele/devices
+[07/08/2026 14:22:04] Parents GET /miele/token
+[07/08/2026 14:22:04] Parents POST /wash/list
+[07/08/2026 14:22:04] Parents GET /miele/devices
+[07/08/2026 15:12:14] Parents POST /wash/list
+[07/08/2026 15:12:14] Parents GET /miele/token
+[07/08/2026 15:12:14] Parents GET /miele/devices
+[07/08/2026 16:41:22] Parents POST /wash/list
+[07/08/2026 16:41:22] Parents GET /miele/token
+[07/08/2026 16:41:22] Parents GET /miele/devices
+[07/08/2026 16:47:28] Parents POST /wash/list
+[07/08/2026 16:47:28] Parents GET /miele/token
+[07/08/2026 16:47:28] Parents GET /miele/devices
+[07/08/2026 16:52:00] Parents POST /wash/list
+[07/08/2026 16:52:00] Parents GET /miele/token
+[07/08/2026 16:52:00] Parents GET /miele/devices
+[07/08/2026 17:07:28] Parents POST /wash/list
+[07/08/2026 17:07:28] Parents GET /miele/token
+[07/08/2026 17:07:28] Parents GET /miele/devices
+[07/08/2026 17:12:00] Parents POST /wash/list
+[07/08/2026 17:12:00] Parents GET /miele/token
+[07/08/2026 17:12:00] Parents GET /miele/devices
+[07/08/2026 17:28:28] Parents POST /wash/list
+[07/08/2026 17:28:28] Parents GET /miele/token
+[07/08/2026 17:28:28] Parents GET /miele/devices
+[07/08/2026 17:33:00] Parents POST /wash/list
+[07/08/2026 17:33:00] Parents GET /miele/token
+[07/08/2026 17:33:00] Parents GET /miele/devices
+[07/08/2026 17:42:28] Parents POST /wash/list
+[07/08/2026 17:42:28] Parents GET /miele/token
+[07/08/2026 17:42:28] Parents GET /miele/devices
+[07/08/2026 17:47:00] Parents POST /wash/list
+[07/08/2026 17:47:00] Parents GET /miele/token
+[07/08/2026 17:47:00] Parents GET /miele/devices
+[07/08/2026 17:52:28] Parents POST /wash/list
+[07/08/2026 17:52:28] Parents GET /miele/token
+[07/08/2026 17:52:28] Parents GET /miele/devices
+[07/08/2026 17:57:00] Parents POST /wash/list
+[07/08/2026 17:57:00] Parents GET /miele/token
+[07/08/2026 17:57:00] Parents GET /miele/devices
+[07/08/2026 18:07:28] Parents POST /wash/list
+[07/08/2026 18:07:28] Parents GET /miele/token
+[07/08/2026 18:07:28] Parents GET /miele/devices
+[07/08/2026 18:12:00] Parents POST /wash/list
+[07/08/2026 18:12:00] Parents GET /miele/token
+[07/08/2026 18:12:00] Parents GET /miele/devices
+[07/08/2026 18:28:28] Parents POST /wash/list
+[07/08/2026 18:28:28] Parents GET /miele/token
+[07/08/2026 18:28:29] Parents GET /miele/devices
+[07/08/2026 18:33:00] Parents POST /wash/list
+[07/08/2026 18:33:00] Parents GET /miele/token
+[07/08/2026 18:33:00] Parents GET /miele/devices
+[07/08/2026 18:48:28] Parents POST /wash/list
+[07/08/2026 18:48:28] Parents GET /miele/token
+[07/08/2026 18:48:28] Parents GET /miele/devices
+[07/08/2026 18:53:00] Parents POST /wash/list
+[07/08/2026 18:53:00] Parents GET /miele/token
+[07/08/2026 18:53:00] Parents GET /miele/devices
+[07/08/2026 18:56:36] Parents POST /wash/list
+[07/08/2026 18:56:36] Parents GET /miele/token
+[07/08/2026 18:56:37] Parents GET /miele/devices
+[07/08/2026 18:56:46] Parents GET /miele/devices/:deviceId
+[07/08/2026 18:56:46] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 18:56:48] Parents PUT /miele/devices/:deviceId/actions
+[07/08/2026 18:56:56] Parents GET /miele/devices/:deviceId
+[07/08/2026 18:56:56] Parents GET /miele/devices/:deviceId/programs
+[07/08/2026 18:58:28] Parents POST /wash/list
+[07/08/2026 18:58:28] Parents GET /miele/token
+[07/08/2026 18:58:28] Parents GET /miele/devices
+[07/08/2026 19:03:00] Parents POST /wash/list
+[07/08/2026 19:03:00] Parents GET /miele/token
+[07/08/2026 19:03:00] Parents GET /miele/devices
+[07/08/2026 19:10:28] Parents POST /wash/list
+[07/08/2026 19:10:28] Parents GET /miele/token
+[07/08/2026 19:10:28] Parents GET /miele/devices
+[07/08/2026 19:15:00] Parents POST /wash/list
+[07/08/2026 19:15:00] Parents GET /miele/token
+[07/08/2026 19:15:00] Parents GET /miele/devices
+[07/08/2026 19:27:28] Parents POST /wash/list
+[07/08/2026 19:27:28] Parents GET /miele/token
+[07/08/2026 19:27:28] Parents GET /miele/devices
+[07/08/2026 19:32:00] Parents POST /wash/list
+[07/08/2026 19:32:00] Parents GET /miele/token
+[07/08/2026 19:32:00] Parents GET /miele/devices
+[07/08/2026 19:37:28] Parents POST /wash/list
+[07/08/2026 19:37:28] Parents GET /miele/token
+[07/08/2026 19:37:28] Parents GET /miele/devices
+[07/08/2026 19:42:00] Parents POST /wash/list
+[07/08/2026 19:42:00] Parents GET /miele/token
+[07/08/2026 19:42:00] Parents GET /miele/devices
+[07/08/2026 19:50:28] Parents POST /wash/list
+[07/08/2026 19:50:28] Parents GET /miele/token
+[07/08/2026 19:50:28] Parents GET /miele/devices
+[07/08/2026 19:55:00] Parents POST /wash/list
+[07/08/2026 19:55:00] Parents GET /miele/token
+[07/08/2026 19:55:00] Parents GET /miele/devices
+[07/08/2026 20:00:28] Parents POST /wash/list
+[07/08/2026 20:00:28] Parents GET /miele/token
+[07/08/2026 20:00:28] Parents GET /miele/devices
+[07/08/2026 20:05:00] Parents POST /wash/list
+[07/08/2026 20:05:00] Parents GET /miele/token
+[07/08/2026 20:05:00] Parents GET /miele/devices
+[07/08/2026 20:10:28] Parents POST /wash/list
+[07/08/2026 20:10:28] Parents GET /miele/token
+[07/08/2026 20:10:28] Parents GET /miele/devices
+[07/08/2026 20:15:00] Parents POST /wash/list
+[07/08/2026 20:15:00] Parents GET /miele/token
+[07/08/2026 20:15:00] Parents GET /miele/devices
+[07/08/2026 20:24:28] Parents POST /wash/list
+[07/08/2026 20:24:28] Parents GET /miele/token
+[07/08/2026 20:24:28] Parents GET /miele/devices
+[07/08/2026 20:29:00] Parents POST /wash/list
+[07/08/2026 20:29:00] Parents GET /miele/token
+[07/08/2026 20:29:01] Parents GET /miele/devices
+[07/08/2026 20:36:28] Parents POST /wash/list
+[07/08/2026 20:36:28] Parents GET /miele/token
+[07/08/2026 20:36:28] Parents GET /miele/devices
+[07/08/2026 20:41:00] Parents POST /wash/list
+[07/08/2026 20:41:00] Parents GET /miele/token
+[07/08/2026 20:41:00] Parents GET /miele/devices
+[07/08/2026 20:58:28] Parents GET /miele/token
+[07/08/2026 20:58:28] Parents POST /wash/list
+[07/08/2026 20:58:28] Parents GET /miele/devices
+[07/08/2026 21:03:00] Parents POST /wash/list
+[07/08/2026 21:03:00] Parents GET /miele/token
+[07/08/2026 21:03:00] Parents GET /miele/devices
+[07/08/2026 21:10:28] Parents POST /wash/list
+[07/08/2026 21:10:28] Parents GET /miele/token
+[07/08/2026 21:10:28] Parents GET /miele/devices
+[07/08/2026 21:15:00] Parents POST /wash/list
+[07/08/2026 21:15:00] Parents GET /miele/token
+[07/08/2026 21:15:00] Parents GET /miele/devices
+[07/08/2026 21:22:28] Parents POST /wash/list
+[07/08/2026 21:22:28] Parents GET /miele/token
+[07/08/2026 21:22:28] Parents GET /miele/devices
+[07/08/2026 21:27:00] Parents POST /wash/list
+[07/08/2026 21:27:00] Parents GET /miele/token
+[07/08/2026 21:27:00] Parents GET /miele/devices
+[07/08/2026 21:44:28] Parents POST /wash/list
+[07/08/2026 21:44:28] Parents GET /miele/token
+[07/08/2026 21:44:28] Parents GET /miele/devices
+[07/08/2026 21:49:00] Parents POST /wash/list
+[07/08/2026 21:49:00] Parents GET /miele/token
+[07/08/2026 21:49:00] Parents GET /miele/devices
+[07/08/2026 22:21:28] Parents POST /wash/list
+[07/08/2026 22:21:28] Parents GET /miele/token
+[07/08/2026 22:21:28] Parents GET /miele/devices
+[07/08/2026 22:26:00] Parents POST /wash/list
+[07/08/2026 22:26:00] Parents GET /miele/token
+[07/08/2026 22:26:00] Parents GET /miele/devices
+[07/08/2026 22:32:28] Parents POST /wash/list
+[07/08/2026 22:32:28] Parents GET /miele/token
+[07/08/2026 22:32:28] Parents GET /miele/devices
+[07/08/2026 22:37:00] Parents POST /wash/list
+[07/08/2026 22:37:00] Parents GET /miele/token
+[07/08/2026 22:37:00] Parents GET /miele/devices
+[07/08/2026 22:42:28] Parents POST /wash/list
+[07/08/2026 22:42:28] Parents GET /miele/token
+[07/08/2026 22:42:28] Parents GET /miele/devices
+[07/08/2026 22:47:00] Parents POST /wash/list
+[07/08/2026 22:47:00] Parents GET /miele/token
+[07/08/2026 22:47:00] Parents GET /miele/devices
+[07/08/2026 23:15:28] Parents POST /wash/list
+[07/08/2026 23:15:28] Parents GET /miele/token
+[07/08/2026 23:15:28] Parents GET /miele/devices
+[07/08/2026 23:20:00] Parents POST /wash/list
+[07/08/2026 23:20:00] Parents GET /miele/token
+[07/08/2026 23:20:00] Parents GET /miele/devices
+[07/08/2026 23:34:28] Parents POST /wash/list
+[07/08/2026 23:34:28] Parents GET /miele/token
+[07/08/2026 23:34:28] Parents GET /miele/devices
+[07/08/2026 23:39:00] Parents POST /wash/list
+[07/08/2026 23:39:00] Parents GET /miele/token
+[07/08/2026 23:39:00] Parents GET /miele/devices
+[07/08/2026 23:50:28] Parents POST /wash/list
+[07/08/2026 23:50:28] Parents GET /miele/token
+[07/08/2026 23:50:28] Parents GET /miele/devices
+[07/08/2026 23:55:00] Parents POST /wash/list
+[07/08/2026 23:55:00] Parents GET /miele/token
+[07/08/2026 23:55:00] Parents GET /miele/devices
+[08/08/2026 00:04:28] Parents POST /wash/list
+[08/08/2026 00:04:28] Parents GET /miele/token
+[08/08/2026 00:04:28] Parents GET /miele/devices
+[08/08/2026 00:09:00] Parents POST /wash/list
+[08/08/2026 00:09:00] Parents GET /miele/token
+[08/08/2026 00:09:00] Parents GET /miele/devices
+[08/08/2026 00:16:28] Parents POST /wash/list
+[08/08/2026 00:16:28] Parents GET /miele/token
+[08/08/2026 00:16:28] Parents GET /miele/devices
+[08/08/2026 00:21:00] Parents POST /wash/list
+[08/08/2026 00:21:00] Parents GET /miele/token
+[08/08/2026 00:21:00] Parents GET /miele/devices
+[08/08/2026 00:28:28] Parents POST /wash/list
+[08/08/2026 00:28:28] Parents GET /miele/token
+[08/08/2026 00:28:28] Parents GET /miele/devices
+[08/08/2026 00:33:00] Parents POST /wash/list
+[08/08/2026 00:33:00] Parents GET /miele/token
+[08/08/2026 00:33:00] Parents GET /miele/devices
+[08/08/2026 00:51:28] Parents POST /wash/list
+[08/08/2026 00:51:28] Parents GET /miele/token
+[08/08/2026 00:51:28] Parents GET /miele/devices
+[08/08/2026 00:56:00] Parents POST /wash/list
+[08/08/2026 00:56:00] Parents GET /miele/token
+[08/08/2026 00:56:00] Parents GET /miele/devices
+[08/08/2026 01:07:28] Parents POST /wash/list
+[08/08/2026 01:07:28] Parents GET /miele/token
+[08/08/2026 01:07:28] Parents GET /miele/devices
+[08/08/2026 01:12:00] Parents POST /wash/list
+[08/08/2026 01:12:00] Parents GET /miele/token
+[08/08/2026 01:12:00] Parents GET /miele/devices
+[08/08/2026 01:39:28] Parents POST /wash/list
+[08/08/2026 01:39:28] Parents GET /miele/token
+[08/08/2026 01:39:28] Parents GET /miele/devices
+[08/08/2026 01:44:00] Parents POST /wash/list
+[08/08/2026 01:44:00] Parents GET /miele/token
+[08/08/2026 01:44:00] Parents GET /miele/devices
+[08/08/2026 01:52:28] Parents GET /miele/token
+[08/08/2026 01:52:28] Parents POST /wash/list
+[08/08/2026 01:52:28] Parents GET /miele/devices
+[08/08/2026 01:57:00] Parents POST /wash/list
+[08/08/2026 01:57:00] Parents GET /miele/token
+[08/08/2026 01:57:00] Parents GET /miele/devices
+[08/08/2026 02:12:28] Parents POST /wash/list
+[08/08/2026 02:12:28] Parents GET /miele/token
+[08/08/2026 02:12:28] Parents GET /miele/devices
+[08/08/2026 02:17:00] Parents POST /wash/list
+[08/08/2026 02:17:00] Parents GET /miele/token
+[08/08/2026 02:17:00] Parents GET /miele/devices
+[08/08/2026 02:31:28] Parents POST /wash/list
+[08/08/2026 02:31:28] Parents GET /miele/token
+[08/08/2026 02:31:28] Parents GET /miele/devices
+[08/08/2026 02:36:00] Parents POST /wash/list
+[08/08/2026 02:36:00] Parents GET /miele/token
+[08/08/2026 02:36:00] Parents GET /miele/devices
+[08/08/2026 02:41:28] Parents POST /wash/list
+[08/08/2026 02:41:28] Parents GET /miele/token
+[08/08/2026 02:41:28] Parents GET /miele/devices
+[08/08/2026 02:46:00] Parents POST /wash/list
+[08/08/2026 02:46:00] Parents GET /miele/token
+[08/08/2026 02:46:00] Parents GET /miele/devices
+[08/08/2026 02:57:29] Parents POST /wash/list
+[08/08/2026 02:57:29] Parents GET /miele/token
+[08/08/2026 02:57:29] Parents GET /miele/devices
+[08/08/2026 03:02:00] Parents POST /wash/list
+[08/08/2026 03:02:00] Parents GET /miele/token
+[08/08/2026 03:02:00] Parents GET /miele/devices
+[08/08/2026 03:17:28] Parents POST /wash/list
+[08/08/2026 03:17:28] Parents GET /miele/token
+[08/08/2026 03:17:28] Parents GET /miele/devices
+[08/08/2026 03:22:00] Parents POST /wash/list
+[08/08/2026 03:22:00] Parents GET /miele/token
+[08/08/2026 03:22:00] Parents GET /miele/devices
+[08/08/2026 03:37:28] Parents GET /miele/token
+[08/08/2026 03:37:28] Parents POST /wash/list
+[08/08/2026 03:37:28] Parents GET /miele/devices
+[08/08/2026 03:42:00] Parents POST /wash/list
+[08/08/2026 03:42:00] Parents GET /miele/token
+[08/08/2026 03:42:00] Parents GET /miele/devices
+[08/08/2026 03:57:28] Parents POST /wash/list
+[08/08/2026 03:57:28] Parents GET /miele/token
+[08/08/2026 03:57:29] Parents GET /miele/devices
+[08/08/2026 04:02:00] Parents POST /wash/list
+[08/08/2026 04:02:00] Parents GET /miele/token
+[08/08/2026 04:02:00] Parents GET /miele/devices
+[08/08/2026 04:29:28] Parents POST /wash/list
+[08/08/2026 04:29:28] Parents GET /miele/token
+[08/08/2026 04:29:29] Parents GET /miele/devices
+[08/08/2026 04:34:00] Parents POST /wash/list
+[08/08/2026 04:34:00] Parents GET /miele/token
+[08/08/2026 04:34:00] Parents GET /miele/devices
+[08/08/2026 04:51:28] Parents POST /wash/list
+[08/08/2026 04:51:28] Parents GET /miele/token
+[08/08/2026 04:51:29] Parents GET /miele/devices
+[08/08/2026 04:56:00] Parents POST /wash/list
+[08/08/2026 04:56:00] Parents GET /miele/token
+[08/08/2026 04:56:01] Parents GET /miele/devices
+[08/08/2026 05:02:28] Parents POST /wash/list
+[08/08/2026 05:02:28] Parents GET /miele/token
+[08/08/2026 05:02:28] Parents GET /miele/devices
+[08/08/2026 05:07:00] Parents POST /wash/list
+[08/08/2026 05:07:00] Parents GET /miele/token
+[08/08/2026 05:07:00] Parents GET /miele/devices
+[08/08/2026 05:13:28] Parents POST /wash/list
+[08/08/2026 05:13:28] Parents GET /miele/token
+[08/08/2026 05:13:28] Parents GET /miele/devices
+[08/08/2026 05:18:00] Parents POST /wash/list
+[08/08/2026 05:18:00] Parents GET /miele/token
+[08/08/2026 05:18:00] Parents GET /miele/devices
+[08/08/2026 05:37:28] Parents POST /wash/list
+[08/08/2026 05:37:28] Parents GET /miele/token
+[08/08/2026 05:37:28] Parents GET /miele/devices
+[08/08/2026 05:42:00] Parents POST /wash/list
+[08/08/2026 05:42:00] Parents GET /miele/token
+[08/08/2026 05:42:00] Parents GET /miele/devices
+[08/08/2026 06:22:28] Parents POST /wash/list
+[08/08/2026 06:22:28] Parents GET /miele/token
+[08/08/2026 06:22:28] Parents GET /miele/devices
+[08/08/2026 06:27:00] Parents POST /wash/list
+[08/08/2026 06:27:00] Parents GET /miele/token
+[08/08/2026 06:27:00] Parents GET /miele/devices
+[08/08/2026 06:38:28] Parents GET /miele/token
+[08/08/2026 06:38:28] Parents POST /wash/list
+[08/08/2026 06:38:28] Parents GET /miele/devices
+[08/08/2026 06:43:00] Parents POST /wash/list
+[08/08/2026 06:43:00] Parents GET /miele/token
+[08/08/2026 06:43:00] Parents GET /miele/devices
+[08/08/2026 07:13:28] Parents POST /wash/list
+[08/08/2026 07:13:28] Parents GET /miele/token
+[08/08/2026 07:13:28] Parents GET /miele/devices
+[08/08/2026 07:18:00] Parents POST /wash/list
+[08/08/2026 07:18:00] Parents GET /miele/token
+[08/08/2026 07:18:00] Parents GET /miele/devices
+[08/08/2026 07:27:28] Parents POST /wash/list
+[08/08/2026 07:27:28] Parents GET /miele/token
+[08/08/2026 07:27:28] Parents GET /miele/devices
+[08/08/2026 07:32:00] Parents POST /wash/list
+[08/08/2026 07:32:00] Parents GET /miele/token
+[08/08/2026 07:32:00] Parents GET /miele/devices
+[08/08/2026 07:37:28] Parents POST /wash/list
+[08/08/2026 07:37:28] Parents GET /miele/token
+[08/08/2026 07:37:28] Parents GET /miele/devices
+[08/08/2026 07:42:00] Parents POST /wash/list
+[08/08/2026 07:42:00] Parents GET /miele/token
+[08/08/2026 07:42:00] Parents GET /miele/devices
+[08/08/2026 07:49:28] Parents POST /wash/list
+[08/08/2026 07:49:28] Parents GET /miele/token
+[08/08/2026 07:49:28] Parents GET /miele/devices
+[08/08/2026 07:54:00] Parents POST /wash/list
+[08/08/2026 07:54:00] Parents GET /miele/token
+[08/08/2026 07:54:00] Parents GET /miele/devices
+[08/08/2026 08:00:28] Parents POST /wash/list
+[08/08/2026 08:00:28] Parents GET /miele/token
+[08/08/2026 08:00:28] Parents GET /miele/devices
+[08/08/2026 08:05:00] Parents POST /wash/list
+[08/08/2026 08:05:00] Parents GET /miele/token
+[08/08/2026 08:05:00] Parents GET /miele/devices
+[08/08/2026 08:13:28] Parents POST /wash/list
+[08/08/2026 08:13:28] Parents GET /miele/token
+[08/08/2026 08:13:28] Parents GET /miele/devices
+[08/08/2026 08:18:00] Parents POST /wash/list
+[08/08/2026 08:18:00] Parents GET /miele/token
+[08/08/2026 08:18:00] Parents GET /miele/devices
+[08/08/2026 08:32:28] Parents POST /wash/list
+[08/08/2026 08:32:28] Parents GET /miele/token
+[08/08/2026 08:32:29] Parents GET /miele/devices
+[08/08/2026 08:37:00] Parents POST /wash/list
+[08/08/2026 08:37:00] Parents GET /miele/token
+[08/08/2026 08:37:00] Parents GET /miele/devices
+[08/08/2026 08:42:28] Parents POST /wash/list
+[08/08/2026 08:42:28] Parents GET /miele/token
+[08/08/2026 08:42:28] Parents GET /miele/devices
+[08/08/2026 08:47:00] Parents POST /wash/list
+[08/08/2026 08:47:00] Parents GET /miele/token
+[08/08/2026 08:47:00] Parents GET /miele/devices
+[08/08/2026 09:04:28] Parents POST /wash/list
+[08/08/2026 09:04:28] Parents GET /miele/token
+[08/08/2026 09:04:28] Parents GET /miele/devices
+[08/08/2026 09:09:00] Parents POST /wash/list
+[08/08/2026 09:09:00] Parents GET /miele/token
+[08/08/2026 09:09:00] Parents GET /miele/devices
+[08/08/2026 09:22:28] Parents POST /wash/list
+[08/08/2026 09:22:28] Parents GET /miele/token
+[08/08/2026 09:22:28] Parents GET /miele/devices
+[08/08/2026 09:27:00] Parents POST /wash/list
+[08/08/2026 09:27:00] Parents GET /miele/token
+[08/08/2026 09:27:01] Parents GET /miele/devices
+[08/08/2026 09:44:28] Parents POST /wash/list
+[08/08/2026 09:44:28] Parents GET /miele/token
+[08/08/2026 09:44:28] Parents GET /miele/devices
+[08/08/2026 09:49:00] Parents POST /wash/list
+[08/08/2026 09:49:00] Parents GET /miele/token
+[08/08/2026 09:49:00] Parents GET /miele/devices
+[08/08/2026 10:03:28] Parents POST /wash/list
+[08/08/2026 10:03:28] Parents GET /miele/token
+[08/08/2026 10:03:28] Parents GET /miele/devices
+[08/08/2026 10:08:00] Parents POST /wash/list
+[08/08/2026 10:08:00] Parents GET /miele/token
+[08/08/2026 10:08:00] Parents GET /miele/devices
+[08/08/2026 10:52:28] Parents GET /miele/token
+[08/08/2026 10:52:28] Parents POST /wash/list
+[08/08/2026 10:52:28] Parents GET /miele/devices
+[08/08/2026 10:57:00] Parents POST /wash/list
+[08/08/2026 10:57:00] Parents GET /miele/token
+[08/08/2026 10:57:00] Parents GET /miele/devices
+[08/08/2026 11:25:28] Parents POST /wash/list
+[08/08/2026 11:25:28] Parents GET /miele/token
+[08/08/2026 11:25:29] Parents GET /miele/devices
+[08/08/2026 11:30:00] Parents GET /miele/token
+[08/08/2026 11:30:00] Parents POST /wash/list
+[08/08/2026 11:30:00] Parents GET /miele/devices
+[08/08/2026 11:36:28] Parents POST /wash/list
+[08/08/2026 11:36:28] Parents GET /miele/token
+[08/08/2026 11:36:28] Parents GET /miele/devices
+[08/08/2026 11:41:00] Parents POST /wash/list
+[08/08/2026 11:41:00] Parents GET /miele/token
+[08/08/2026 11:41:00] Parents GET /miele/devices
+[08/08/2026 11:49:28] Parents POST /wash/list
+[08/08/2026 11:49:28] Parents GET /miele/token
+[08/08/2026 11:49:28] Parents GET /miele/devices
+[08/08/2026 11:54:00] Parents POST /wash/list
+[08/08/2026 11:54:00] Parents GET /miele/token
+[08/08/2026 11:54:00] Parents GET /miele/devices
+[08/08/2026 11:59:28] Parents POST /wash/list
+[08/08/2026 11:59:28] Parents GET /miele/token
+[08/08/2026 11:59:28] Parents GET /miele/devices
+[08/08/2026 12:04:00] Parents POST /wash/list
+[08/08/2026 12:04:00] Parents GET /miele/token
+[08/08/2026 12:04:00] Parents GET /miele/devices
+[08/08/2026 12:09:28] Parents POST /wash/list
+[08/08/2026 12:09:28] Parents GET /miele/token
+[08/08/2026 12:09:28] Parents GET /miele/devices
+[08/08/2026 12:14:00] Parents POST /wash/list
+[08/08/2026 12:14:00] Parents GET /miele/token
+[08/08/2026 12:14:00] Parents GET /miele/devices
+[08/08/2026 12:25:28] Parents POST /wash/list
+[08/08/2026 12:25:28] Parents GET /miele/token
+[08/08/2026 12:25:28] Parents GET /miele/devices
+[08/08/2026 12:30:00] Parents POST /wash/list
+[08/08/2026 12:30:00] Parents GET /miele/token
+[08/08/2026 12:30:00] Parents GET /miele/devices
+[08/08/2026 12:59:28] Parents POST /wash/list
+[08/08/2026 12:59:28] Parents GET /miele/token
+[08/08/2026 12:59:28] Parents GET /miele/devices
+[08/08/2026 13:04:00] Parents POST /wash/list
+[08/08/2026 13:04:00] Parents GET /miele/token
+[08/08/2026 13:04:00] Parents GET /miele/devices
+[08/08/2026 13:16:28] Parents POST /wash/list
+[08/08/2026 13:16:28] Parents GET /miele/token
+[08/08/2026 13:16:28] Parents GET /miele/devices
+[08/08/2026 13:21:00] Parents POST /wash/list
+[08/08/2026 13:21:00] Parents GET /miele/token
+[08/08/2026 13:21:00] Parents GET /miele/devices
+[08/08/2026 13:36:28] Parents GET /miele/token
+[08/08/2026 13:36:28] Parents POST /wash/list
+[08/08/2026 13:36:28] Parents GET /miele/devices
+[08/08/2026 13:41:00] Parents POST /wash/list
+[08/08/2026 13:41:00] Parents GET /miele/token
+[08/08/2026 13:41:00] Parents GET /miele/devices
+[08/08/2026 13:53:28] Parents POST /wash/list
+[08/08/2026 13:53:28] Parents GET /miele/token
+[08/08/2026 13:53:28] Parents GET /miele/devices
+[08/08/2026 13:58:00] Parents GET /miele/token
+[08/08/2026 13:58:00] Parents POST /wash/list
+[08/08/2026 13:58:00] Parents GET /miele/devices
+[08/08/2026 14:07:28] Parents POST /wash/list
+[08/08/2026 14:07:28] Parents GET /miele/token
+[08/08/2026 14:07:28] Parents GET /miele/devices
+[08/08/2026 14:12:00] Parents POST /wash/list
+[08/08/2026 14:12:00] Parents GET /miele/token
+[08/08/2026 14:12:00] Parents GET /miele/devices
+[08/08/2026 14:29:28] Parents GET /miele/token
+[08/08/2026 14:29:28] Parents POST /wash/list
+[08/08/2026 14:29:28] Parents GET /miele/devices
+[08/08/2026 14:34:00] Parents POST /wash/list
+[08/08/2026 14:34:00] Parents GET /miele/token
+[08/08/2026 14:34:00] Parents GET /miele/devices
+[08/08/2026 14:55:28] Parents POST /wash/list
+[08/08/2026 14:55:28] Parents GET /miele/token
+[08/08/2026 14:55:28] Parents GET /miele/devices
+[08/08/2026 15:00:00] Parents POST /wash/list
+[08/08/2026 15:00:00] Parents GET /miele/token
+[08/08/2026 15:00:00] Parents GET /miele/devices
+[08/08/2026 15:07:28] Parents POST /wash/list
+[08/08/2026 15:07:28] Parents GET /miele/token
+[08/08/2026 15:07:28] Parents GET /miele/devices
+[08/08/2026 15:12:00] Parents POST /wash/list
+[08/08/2026 15:12:00] Parents GET /miele/token
+[08/08/2026 15:12:00] Parents GET /miele/devices
+[08/08/2026 15:22:28] Parents POST /wash/list
+[08/08/2026 15:22:28] Parents GET /miele/token
+[08/08/2026 15:22:28] Parents GET /miele/devices
+[08/08/2026 15:27:00] Parents GET /miele/token
+[08/08/2026 15:27:00] Parents POST /wash/list
+[08/08/2026 15:27:00] Parents GET /miele/devices
+[08/08/2026 15:40:28] Parents POST /wash/list
+[08/08/2026 15:40:28] Parents GET /miele/token
+[08/08/2026 15:40:28] Parents GET /miele/devices
+[08/08/2026 15:45:00] Parents POST /wash/list
+[08/08/2026 15:45:00] Parents GET /miele/token
+[08/08/2026 15:45:00] Parents GET /miele/devices
+[08/08/2026 16:13:28] Parents POST /wash/list
+[08/08/2026 16:13:28] Parents GET /miele/token
+[08/08/2026 16:13:29] Parents GET /miele/devices
+[08/08/2026 16:18:00] Parents POST /wash/list
+[08/08/2026 16:18:00] Parents GET /miele/token
+[08/08/2026 16:18:00] Parents GET /miele/devices
+[08/08/2026 16:37:28] Parents POST /wash/list
+[08/08/2026 16:37:28] Parents GET /miele/token
+[08/08/2026 16:37:29] Parents GET /miele/devices
+[08/08/2026 16:42:00] Parents POST /wash/list
+[08/08/2026 16:42:00] Parents GET /miele/token
+[08/08/2026 16:42:00] Parents GET /miele/devices
+[08/08/2026 16:55:28] Parents POST /wash/list
+[08/08/2026 16:55:29] Parents GET /miele/token
+[08/08/2026 16:55:29] Parents GET /miele/devices
+[08/08/2026 17:00:01] Parents POST /wash/list
+[08/08/2026 17:00:01] Parents GET /miele/token
+[08/08/2026 17:00:01] Parents GET /miele/devices
+[08/08/2026 17:07:28] Parents POST /wash/list
+[08/08/2026 17:07:28] Parents GET /miele/token
+[08/08/2026 17:07:28] Parents GET /miele/devices
+[08/08/2026 17:12:00] Parents POST /wash/list
+[08/08/2026 17:12:00] Parents GET /miele/token
+[08/08/2026 17:12:00] Parents GET /miele/devices
+[08/08/2026 17:21:28] Parents POST /wash/list
+[08/08/2026 17:21:28] Parents GET /miele/token
+[08/08/2026 17:21:28] Parents GET /miele/devices
+[08/08/2026 17:26:00] Parents POST /wash/list
+[08/08/2026 17:26:00] Parents GET /miele/token
+[08/08/2026 17:26:00] Parents GET /miele/devices
+[08/08/2026 17:49:28] Parents POST /wash/list
+[08/08/2026 17:49:28] Parents GET /miele/token
+[08/08/2026 17:49:28] Parents GET /miele/devices
+[08/08/2026 17:54:00] Parents POST /wash/list
+[08/08/2026 17:54:00] Parents GET /miele/token
+[08/08/2026 17:54:00] Parents GET /miele/devices
+[08/08/2026 18:02:28] Parents GET /miele/token
+[08/08/2026 18:02:28] Parents POST /wash/list
+[08/08/2026 18:02:28] Parents GET /miele/devices
+[08/08/2026 18:07:00] Parents POST /wash/list
+[08/08/2026 18:07:00] Parents GET /miele/token
+[08/08/2026 18:07:00] Parents GET /miele/devices
+[08/08/2026 18:17:28] Parents POST /wash/list
+[08/08/2026 18:17:29] Parents GET /miele/token
+[08/08/2026 18:17:29] Parents GET /miele/devices
+[08/08/2026 18:22:00] Parents GET /miele/token
+[08/08/2026 18:22:00] Parents POST /wash/list
+[08/08/2026 18:22:00] Parents GET /miele/devices
+[08/08/2026 18:35:28] Parents POST /wash/list
+[08/08/2026 18:35:29] Parents GET /miele/token
+[08/08/2026 18:35:29] Parents GET /miele/devices
+[08/08/2026 18:40:00] Parents POST /wash/list
+[08/08/2026 18:40:00] Parents GET /miele/token
+[08/08/2026 18:40:00] Parents GET /miele/devices
+[08/08/2026 18:45:28] Parents POST /wash/list
+[08/08/2026 18:45:28] Parents GET /miele/token
+[08/08/2026 18:45:28] Parents GET /miele/devices
+[08/08/2026 18:50:00] Parents POST /wash/list
+[08/08/2026 18:50:00] Parents GET /miele/token
+[08/08/2026 18:50:00] Parents GET /miele/devices
+[08/08/2026 19:04:28] Parents POST /wash/list
+[08/08/2026 19:04:28] Parents GET /miele/token
+[08/08/2026 19:04:28] Parents GET /miele/devices
+[08/08/2026 19:09:00] Parents POST /wash/list
+[08/08/2026 19:09:00] Parents GET /miele/token
+[08/08/2026 19:09:00] Parents GET /miele/devices
+[08/08/2026 19:16:28] Parents POST /wash/list
+[08/08/2026 19:16:28] Parents GET /miele/token
+[08/08/2026 19:16:28] Parents GET /miele/devices
+[08/08/2026 19:21:00] Parents POST /wash/list
+[08/08/2026 19:21:00] Parents GET /miele/token
+[08/08/2026 19:21:00] Parents GET /miele/devices
+[08/08/2026 19:33:02] Parents POST /wash/list
+[08/08/2026 19:33:02] Parents GET /miele/token
+[08/08/2026 19:33:03] Parents GET /miele/devices
+[08/08/2026 19:39:31] Parents POST /wash/list
+[08/08/2026 19:39:31] Parents GET /miele/token
+[08/08/2026 19:39:32] Parents GET /miele/devices
+[08/08/2026 19:44:01] Parents POST /wash/list
+[08/08/2026 19:44:01] Parents GET /miele/token
+[08/08/2026 19:44:01] Parents GET /miele/devices
+[08/08/2026 19:52:28] Parents POST /wash/list
+[08/08/2026 19:52:28] Parents GET /miele/token
+[08/08/2026 19:52:28] Parents GET /miele/devices
+[08/08/2026 19:57:00] Parents POST /wash/list
+[08/08/2026 19:57:00] Parents GET /miele/token
+[08/08/2026 19:57:00] Parents GET /miele/devices
+[08/08/2026 21:01:19] Parents POST /wash/list
+[08/08/2026 21:01:19] Parents GET /miele/token
+[08/08/2026 21:01:19] Parents GET /miele/devices
+[08/08/2026 21:01:23] Parents GET /miele/devices/:deviceId
+[08/08/2026 21:01:23] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 21:13:51] Parents POST /wash/list
+[08/08/2026 21:13:51] Parents GET /miele/token
+[08/08/2026 21:15:16] Parents POST /wash/list
+[08/08/2026 21:15:16] Parents GET /miele/token
+[08/08/2026 21:15:27] Parents POST /wash/list
+[08/08/2026 21:15:27] Parents GET /miele/token
+[08/08/2026 21:15:33] Parents POST /wash/list
+[08/08/2026 21:15:33] Parents GET /miele/token
+[08/08/2026 21:16:49] Parents GET /miele/token
+[08/08/2026 21:16:49] Parents POST /wash/list
+[08/08/2026 21:21:20] Parents POST /wash/list
+[08/08/2026 21:21:20] Parents GET /miele/token
+[08/08/2026 21:27:28] Parents POST /wash/list
+[08/08/2026 21:27:28] Parents GET /miele/token
+[08/08/2026 21:32:00] Parents GET /miele/token
+[08/08/2026 21:32:00] Parents POST /wash/list
+[08/08/2026 21:40:28] Parents POST /wash/list
+[08/08/2026 21:40:28] Parents GET /miele/token
+[08/08/2026 21:42:51] Parents POST /wash/list
+[08/08/2026 21:42:51] Parents GET /miele/token
+[08/08/2026 21:42:52] Parents POST /wash/list
+[08/08/2026 21:42:52] Parents GET /miele/token
+[08/08/2026 21:42:53] Parents POST /wash/list
+[08/08/2026 21:42:53] Parents GET /miele/token
+[08/08/2026 21:42:55] Parents GET /miele/connect
+[08/08/2026 21:43:16] Parents POST /wash/list
+[08/08/2026 21:43:21] Parents POST /wash/list
+[08/08/2026 21:43:21] Parents GET /miele/token
+[08/08/2026 21:43:22] Parents GET /miele/connect
+[08/08/2026 21:44:19] Parents POST /wash/list
+[08/08/2026 21:44:39] Parents GET /miele/connect
+[08/08/2026 21:44:53] Parents POST /wash/list
+[08/08/2026 21:44:59] Parents GET /miele/connect
+[08/08/2026 21:45:17] Parents POST /wash/list
+[08/08/2026 21:47:24] Parents POST /wash/list
+[08/08/2026 21:47:24] Parents GET /miele/token
+[08/08/2026 21:47:25] Parents GET /miele/connect
+[08/08/2026 21:49:41] Parents POST /wash/list
+[08/08/2026 21:49:41] Parents GET /miele/token
+[08/08/2026 21:49:48] Parents GET /miele/connect
+
+
+
+[08/08/2026 21:50:27] Parents POST /wash/list
+[08/08/2026 21:50:27] Parents GET /miele/token
+[08/08/2026 21:50:27] Parents POST /wash/list
+[08/08/2026 21:50:27] Parents GET /miele/token
+[08/08/2026 21:50:28] Parents GET /miele/connect
+[08/08/2026 21:53:28] Parents GET /miele/token
+[08/08/2026 21:53:28] Parents POST /wash/list
+[08/08/2026 21:53:34] Parents POST /wash/list
+[08/08/2026 21:53:34] Parents GET /miele/token
+[08/08/2026 21:53:52] Parents POST /wash/list
+[08/08/2026 21:53:52] Parents GET /miele/token
+[08/08/2026 21:53:53] Parents GET /miele/connect
+[08/08/2026 21:53:55] Parents POST /wash/list
+[08/08/2026 21:53:55] Parents GET /miele/token
+[08/08/2026 21:54:37] Parents GET /miele/token
+[08/08/2026 21:54:37] Parents POST /wash/list
+[08/08/2026 21:54:53] Parents POST /wash/list
+[08/08/2026 21:54:53] Parents GET /miele/token
+[08/08/2026 21:54:57] Parents GET /miele/connect
+[08/08/2026 21:55:50] Parents POST /wash/list
+[08/08/2026 21:56:09] Parents POST /wash/list
+[08/08/2026 21:56:09] Parents GET /miele/token
+[08/08/2026 21:56:10] Parents GET /miele/connect
+[08/08/2026 21:56:40] Parents POST /wash/list
+[08/08/2026 21:56:42] Parents POST /wash/list
+[08/08/2026 21:56:42] Parents GET /miele/token
+[08/08/2026 21:56:42] Parents GET /miele/connect
+[08/08/2026 22:02:13] Parents GET /miele/token
+[08/08/2026 22:02:13] Parents POST /wash/list
+[08/08/2026 22:02:19] Parents POST /wash/list
+[08/08/2026 22:02:20] Parents POST /wash/list
+[08/08/2026 22:02:20] Parents GET /miele/token
+[08/08/2026 22:02:33] Parents POST /wash/list
+[08/08/2026 22:02:34] Parents GET /miele/token
+[08/08/2026 22:02:35] Parents GET /miele/connect
+[08/08/2026 22:02:42] Parents POST /wash/list
+[08/08/2026 22:07:12] Parents POST /wash/list
+[08/08/2026 22:07:12] Parents GET /miele/token
+[08/08/2026 22:10:40] Parents POST /wash/list
+[08/08/2026 22:10:40] Parents GET /miele/token
+[08/08/2026 22:12:16] Parents POST /wash/list
+[08/08/2026 22:12:16] Parents GET /miele/token
+[08/08/2026 22:12:19] Parents POST /wash/list
+[08/08/2026 22:12:19] Parents GET /miele/token
+[08/08/2026 22:12:19] Parents GET /miele/connect
+[08/08/2026 22:17:27] GET /miele/callback
+[08/08/2026 22:17:27] Connexion à Miele réussie et sauvegardée !
+[08/08/2026 22:17:27] Parents POST /wash/list
+[08/08/2026 22:17:27] Parents GET /miele/token
+[08/08/2026 22:17:28] Parents GET /miele/devices
+[08/08/2026 22:17:30] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:17:30] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:17:41] Parents PUT /miele/devices/:deviceId/programs
+[08/08/2026 22:17:41] PrismaClientValidationError: 
+Invalid `prisma.washing_Program.create()` invocation:
+
+{
+  data: {
+    name: "Express 20",
+    type: 122,
+    createdAt: new Date("2026-08-08T20:17:41.317Z"),
+    startAt: new Date("2026-08-08T20:17:41.317Z"),
+    finished: false,
+    authorId: 1,
+    deviceId: "000185936843",
+    ~~~~~~~~
+?   id?: Int
+  }
+}
+
+Unknown argument `deviceId`. Available options are marked with ?.
+    at wn (/data/node_modules/@prisma/client/runtime/library.js:29:1363)
+    at $n.handleRequestError (/data/node_modules/@prisma/client/runtime/library.js:121:6958)
+    at $n.handleAndLogRequestError (/data/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/data/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/data/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async savePrgmDb (file:///data/src/plugins/Solar_Wash/mieleWashing.js:94:2)
+    at async Object.<anonymous> (file:///data/src/routes/Solar_Wash/mieleWashing.js:259:13) {
+  clientVersion: '5.22.0'
+}
+[08/08/2026 22:17:41] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:17:41] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:18:01] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:18:01] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:19:31] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:19:31] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:20:01] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:20:01] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:20:10] Parents POST /wash/list
+[08/08/2026 22:20:10] Parents GET /miele/token
+[08/08/2026 22:20:12] Parents POST /wash/list
+[08/08/2026 22:20:12] Parents GET /miele/token
+[08/08/2026 22:20:13] Parents GET /miele/connect
+[08/08/2026 22:20:17] GET /miele/callback
+[08/08/2026 22:20:17] Connexion à Miele réussie et sauvegardée !
+[08/08/2026 22:20:17] Parents POST /wash/list
+[08/08/2026 22:20:17] Parents GET /miele/token
+[08/08/2026 22:20:17] Parents GET /miele/devices
+[08/08/2026 22:20:20] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:20:20] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:20:51] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:20:51] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:21:21] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:21:21] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:21:51] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:21:51] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:22:21] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:22:21] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:22:51] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:22:51] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:23:09] Parents PUT /miele/devices/:deviceId/programs
+[08/08/2026 22:23:09] PrismaClientValidationError: 
+Invalid `prisma.washing_Program.create()` invocation:
+
+{
+  data: {
+    name: "Express 20",
+    type: 122,
+    createdAt: new Date("2026-08-08T20:23:09.302Z"),
+    startAt: new Date("2026-08-08T20:23:09.302Z"),
+    finished: false,
+    authorId: 1,
+    deviceId: "000185936843"
+              ~~~~~~~~~~~~~~
+  }
+}
+
+Argument `deviceId`: Invalid value provided. Expected Int, provided String.
+    at wn (/data/node_modules/@prisma/client/runtime/library.js:29:1363)
+    at $n.handleRequestError (/data/node_modules/@prisma/client/runtime/library.js:121:6958)
+    at $n.handleAndLogRequestError (/data/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/data/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/data/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async savePrgmDb (file:///data/src/plugins/Solar_Wash/mieleWashing.js:94:2)
+    at async Object.<anonymous> (file:///data/src/routes/Solar_Wash/mieleWashing.js:259:13) {
+  clientVersion: '5.22.0'
+}
+[08/08/2026 22:23:09] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:23:09] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:23:21] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:23:21] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:23:51] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:23:51] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:24:10] Parents PUT /miele/devices/:deviceId/programs
+[08/08/2026 22:24:10] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:24:10] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:24:21] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:24:21] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:24:51] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:24:51] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:25:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:25:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:26:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:26:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:27:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:27:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:28:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:28:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:29:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:29:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:30:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:30:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:30:28] Parents POST /wash/list
+[08/08/2026 22:30:28] Parents GET /miele/token
+[08/08/2026 22:30:28] Parents GET /miele/devices
+[08/08/2026 22:34:58] Parents POST /wash/list
+[08/08/2026 22:34:58] Parents GET /miele/token
+[08/08/2026 22:34:58] Parents GET /miele/devices
+[08/08/2026 22:40:27] Parents POST /wash/list
+[08/08/2026 22:40:27] Parents GET /miele/token
+[08/08/2026 22:40:27] Parents GET /miele/devices
+[08/08/2026 22:41:29] Parents POST /wash/list
+[08/08/2026 22:41:29] Parents GET /miele/token
+[08/08/2026 22:41:29] Parents GET /miele/devices
+[08/08/2026 22:41:32] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:41:32] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:42:18] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 22:42:18] Parents GET /miele/devices/:deviceId
+[08/08/2026 22:42:56] Parents POST /wash/list
+[08/08/2026 22:42:56] Parents GET /miele/token
+[08/08/2026 22:42:57] Parents GET /miele/devices
+[08/08/2026 22:43:57] Parents POST /wash/list
+[08/08/2026 22:43:57] Parents GET /miele/token
+[08/08/2026 22:44:03] Parents GET /miele/devices
+[08/08/2026 22:44:58] Parents POST /wash/list
+[08/08/2026 22:44:58] Parents GET /miele/token
+[08/08/2026 22:44:58] Parents GET /miele/devices
+[08/08/2026 22:45:03] Parents POST /wash/list
+[08/08/2026 22:45:03] Parents GET /miele/token
+[08/08/2026 22:45:06] Parents GET /miele/devices
+[08/08/2026 22:45:58] Parents POST /wash/list
+[08/08/2026 22:45:58] Parents GET /miele/token
+[08/08/2026 22:45:59] Parents GET /miele/devices
+[08/08/2026 22:53:23] Parents POST /wash/list
+[08/08/2026 22:53:23] Parents GET /miele/token
+[08/08/2026 22:53:24] Parents GET /miele/devices
+[08/08/2026 22:54:28] Parents GET /miele/token
+[08/08/2026 22:54:28] Parents POST /wash/list
+[08/08/2026 22:54:28] Parents GET /miele/devices
+[08/08/2026 22:58:58] Parents POST /wash/list
+[08/08/2026 22:58:58] Parents GET /miele/token
+[08/08/2026 22:58:58] Parents GET /miele/devices
+[08/08/2026 22:59:31] Parents POST /wash/list
+[08/08/2026 22:59:32] Parents GET /miele/token
+[08/08/2026 22:59:36] Parents GET /miele/devices
+[08/08/2026 23:00:32] Parents POST /wash/list
+[08/08/2026 23:00:32] Parents GET /miele/token
+[08/08/2026 23:00:43] Parents GET /miele/devices
+[08/08/2026 23:07:25] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:07:25] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:07:56] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:07:56] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:09:56] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:09:56] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:10:26] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:10:26] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:10:56] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:10:56] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:11:10] Parents POST /wash/list
+[08/08/2026 23:11:10] Parents GET /miele/token
+[08/08/2026 23:11:12] Parents GET /miele/connect
+[08/08/2026 23:11:16] GET /miele/callback
+[08/08/2026 23:11:16] Connexion à Miele réussie et sauvegardée !
+[08/08/2026 23:11:17] Parents POST /wash/list
+[08/08/2026 23:11:17] Parents GET /miele/token
+[08/08/2026 23:11:17] Parents GET /miele/devices
+[08/08/2026 23:11:23] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:11:23] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:11:43] Parents PUT /miele/devices/:deviceId/programs
+[08/08/2026 23:11:43] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:11:43] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:11:54] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:11:54] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:12:24] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:12:24] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:12:54] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:12:54] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:13:24] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:13:24] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:13:54] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:13:54] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:14:24] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:14:24] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:15:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:15:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:16:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:16:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:17:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:17:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:17:53] Parents POST /wash/list
+[08/08/2026 23:17:53] Parents GET /miele/token
+[08/08/2026 23:17:54] Parents GET /miele/devices
+[08/08/2026 23:18:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:18:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:18:27] Parents POST /wash/list
+[08/08/2026 23:18:27] Parents GET /miele/token
+[08/08/2026 23:18:27] Parents GET /miele/devices
+[08/08/2026 23:19:26] Parents POST /wash/list
+[08/08/2026 23:19:26] Parents GET /miele/token
+[08/08/2026 23:19:26] Parents GET /miele/devices
+[08/08/2026 23:22:58] Parents POST /wash/list
+[08/08/2026 23:22:58] Parents GET /miele/token
+[08/08/2026 23:22:58] Parents GET /miele/devices
+[08/08/2026 23:25:29] Parents POST /wash/list
+[08/08/2026 23:25:30] Parents GET /miele/token
+[08/08/2026 23:25:37] Parents GET /miele/devices
+[08/08/2026 23:30:27] Parents POST /wash/list
+[08/08/2026 23:30:28] Parents GET /miele/token
+[08/08/2026 23:30:28] Parents GET /miele/devices
+[08/08/2026 23:34:58] Parents POST /wash/list
+[08/08/2026 23:34:58] Parents GET /miele/token
+[08/08/2026 23:34:58] Parents GET /miele/devices
+[08/08/2026 23:49:58] Parents GET /miele/token
+[08/08/2026 23:49:58] Parents POST /wash/list
+[08/08/2026 23:49:59] Parents GET /miele/connect
+[08/08/2026 23:50:03] GET /miele/callback
+[08/08/2026 23:50:03] Connexion à Miele réussie et sauvegardée !
+[08/08/2026 23:50:04] Parents POST /wash/list
+[08/08/2026 23:50:04] Parents GET /miele/token
+[08/08/2026 23:50:04] Parents GET /miele/devices
+[08/08/2026 23:50:07] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:50:07] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:50:37] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:50:37] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:50:58] Parents PUT /miele/devices/:deviceId/programs
+[08/08/2026 23:50:58] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:50:58] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:51:08] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:51:08] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:51:14] Parents POST /wash/list
+[08/08/2026 23:51:14] Parents GET /miele/token
+[08/08/2026 23:51:15] Parents GET /miele/devices
+[08/08/2026 23:51:15] Parents POST /wash/list
+[08/08/2026 23:51:15] Parents GET /miele/token
+[08/08/2026 23:51:15] Parents GET /miele/devices
+[08/08/2026 23:51:38] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:51:38] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:52:08] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:52:08] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:52:38] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:52:38] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:53:08] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:53:08] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:54:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:54:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:55:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:55:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:56:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:56:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:57:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:57:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:58:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:58:27] Parents GET /miele/devices/:deviceId
+[08/08/2026 23:59:27] Parents GET /miele/devices/:deviceId/programs
+[08/08/2026 23:59:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:00:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:00:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:01:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:01:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:02:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:02:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:03:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:03:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:04:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:04:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:05:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:05:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:06:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:06:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:07:27] Parents GET /miele/devices/:deviceId
+[09/08/2026 00:07:27] Parents GET /miele/devices/:deviceId/programs
+[09/08/2026 00:07:27] Parents POST /wash/list
+[09/08/2026 00:07:27] Parents GET /miele/token
+[09/08/2026 00:07:27] Parents GET /miele/devices
+[09/08/2026 00:22:26] Parents GET /miele/token
+[09/08/2026 00:22:26] Parents POST /wash/list
+[09/08/2026 00:22:26] Parents GET /miele/devices
+[09/08/2026 00:23:11] Parents GET /miele/token
+[09/08/2026 00:23:11] Parents POST /wash/list
+[09/08/2026 00:23:11] Parents GET /miele/devices
+[09/08/2026 00:23:50] Parents GET /miele/token
+[09/08/2026 00:23:50] Parents POST /wash/list
+[09/08/2026 00:23:50] Parents GET /miele/devices
+[09/08/2026 00:24:05] Parents POST /wash/list
+[09/08/2026 00:24:05] Parents GET /miele/token
+[09/08/2026 00:24:05] Parents GET /miele/devices
+[09/08/2026 00:24:20] Parents POST /wash/list
+[09/08/2026 00:24:20] Parents GET /miele/token
+[09/08/2026 00:24:20] Parents GET /miele/devices

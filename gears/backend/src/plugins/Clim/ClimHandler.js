@@ -47,7 +47,7 @@ export default fp(async (server) => {
     setOff:    ()      => runCli('set', ['--running', 'false']),
   });
 
-  await server.clim.getStatus()
-  		.then(s => server.writeLogs(["Server"],'Clim connectée:', s.name, '| temp:', s.indoor, '°C'))
-    	.catch(err => console.warn('Clim inaccessible au démarrage:', err.message));
+  server.clim.getStatus()
+    .then(s => server.writeLogs(["Server"],'Clim connectée:', s.name, '| temp:', s.indoor, '°C'))
+    .catch(err => console.warn('Clim inaccessible au démarrage:', err.message));
 });

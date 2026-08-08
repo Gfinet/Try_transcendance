@@ -1,9 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { subscribeUserToPush } from '../utils/webpush';
 
 export function PushButton() {
 	const [isSubscribed, setIsSubscribed] = useState(false);
 	const [loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		async function checkSubscription() {
+			if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+				setLoading(false);
+				return;
+			}
+			try {
+				const registration = await navigator.serviceWorker.ready;
+				const existingSubscription = await registration.pushManager.getSubscription();
+				if (existingSubscription) setIsSubscribed(true);
+				else setIsSubscribed(false);
+			} catch (error) {
+				console.error("Erreur vérification notification:", error);
+			} finally {
+				setLoading(false);
+			}
+		}
+		checkSubscription();
+	}, []);
 
 	const handleEnablePush = async () => {
 		setLoading(true);
@@ -14,7 +34,7 @@ export function PushButton() {
 		} 
 		catch (error) 
 		{
-			server.writeLogs(Fd["Error"], error);
+			console.error(error);
 			alert(error.message);
 		} 
 		finally {setLoading(false);}

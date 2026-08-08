@@ -7,7 +7,7 @@ export default async function clim(server) {
 			const status = await server.clim.getStatus();
 			return { success: true, data: status };
 		} catch (error) {
-			server.writeLogs(Fd["Error"], 'Clim status error:', err.message);
+			server.writeLog(server.logFd["Error"], 'Clim status error:', err.message);
 			return reply.status(503).send({ success: false, message: err.message });
 		}
 	}
@@ -26,7 +26,7 @@ export default async function clim(server) {
 			if (running !== undefined)     running ? await server.clim.setOn() : await server.clim.setOff();
 			return { success: true };
 		} catch (error) {
-			server.writeLogs(Fd["Error"], 'Clim set error:', error.message);
+			server.writeLog(server.logFd["Error"], 'Clim set error:', error.message);
 			return reply.status(503).send({ success: false, message: error.message });
 		}
       

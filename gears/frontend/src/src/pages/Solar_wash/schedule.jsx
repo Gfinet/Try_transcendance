@@ -30,7 +30,7 @@ function Schedule() {
     setSelectedDevice(e.target.value);
     if (e.target.value !== "/") fetchDevInfo(setDevInfo, e.target.value);
     else                        setDevInfo(null)
-    console.log("devInfo",devInfo)
+    console.log("devInfo",JSON.stringify(devInfo))
   };
 
   const Now = new Date().toLocaleString('fr-BE', { hour: '2-digit', timeZone: 'Europe/Brussels' });
@@ -48,11 +48,6 @@ function Schedule() {
     });
     // console.log("getting db Progrm")
     fetchDbWashingProg(setWash);
-
-  
-  // const idxNow = data.findIndex(d => d.time.startsWith(Now.slice(0, 2)));
-  // setCenter(idxNow !== -1 ? idxNow : Math.floor(data.length / 2));
-  // console.log("N", Now)
     
     const checkConnect = async () =>{
       const connected = await isMieleConnected();
@@ -64,9 +59,16 @@ function Schedule() {
       }
     }
     checkConnect()
-    const intervalId = setInterval(() => {refreshDevInfo()}, 30000);
-    return () => clearInterval(intervalId);
   }, []);
+
+  useEffect(() => {
+    if (selectedDevice === '/') return;
+
+    const intervalId = setInterval(() => {refreshDevInfo()}, 30000);
+
+    return () => clearInterval(intervalId);
+  }, [selectedDevice]);
+
 
   const tempSlice = temp.slice(
     Math.max(0, tempCenter - WIN),
@@ -92,6 +94,11 @@ function Schedule() {
       headers: {
         'Authorization': `Bearer ${token}`,
     }})
+    
+    if (response.status === 401) {
+      localStorage.removeItem('token'); // Nettoie le token périmé
+      navigate('/login');               // Renvoie vers le login
+    }
     const data = await response.json();
     // console.log("data",data)
     return data.success
@@ -121,7 +128,7 @@ function Schedule() {
       <div style={washHeaderDiv}>
         <span style={{...washHeaderCell, width:'20%'}}>Date</span>
         <span style={{...washHeaderCell, width:'30%'}}>Programme</span>
-        <span style={{...washHeaderCell, width:'30%'}}>Autheur</span>
+        <span style={{...washHeaderCell, width:'30%'}}>Auteur</span>
         <span style={{...washHeaderCell, width:'20%', justifyContent:'flex-end'}}>Terminé?</span>
       </div>
       {(wash.length > 0) ? 
@@ -129,12 +136,12 @@ function Schedule() {
         {wash.slice(0, 5).map((program) => (
         <div key={program.id} style={washRowDiv}>
           <span style={{ color: '#888', fontSize: '0.65rem' }}>
-            {new Date(program.time).toLocaleString('fr-FR', { 
+            {new Date(program.createdAt).toLocaleString('fr-FR', { 
               day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' 
             })}
           </span>
           <span style={{ fontWeight: 'bold', color: '#555', fontSize:'0.8rem' }}>
-            {program.type}
+            {program.name}
           </span>
           <span style={{ fontWeight: 'bold', color: '#555' }}>
             {program.author.username}
@@ -143,10 +150,10 @@ function Schedule() {
             padding: '4px 8px', 
             borderRadius: '12px', 
             fontSize: '0.8rem',
-            backgroundColor: program.finished ? '#d4edda' : '#fff3cd',
-            color: program.finished ? '#155724' : '#856404'
+            backgroundColor: program.finished  === "Terminé" ? '#d4edda' : '#fff3cd',
+            color: program.finished === "Terminé" ? '#155724' : '#856404'
           }}>
-            {program.finished ? 'Terminé' : 'En cours'}
+            {program.finished}
           </span>
         </div>
         ))}

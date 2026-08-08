@@ -17,7 +17,7 @@ export default async function modbus(server)
         }
         catch (err)
         {
-            server.writeLogs(Fd["Error"], "erreur :", err)
+            server.writeLog(server.logFd["Error"], "erreur :", err)
             return {success : false, message: 0}
         }
     });
@@ -45,7 +45,7 @@ export default async function modbus(server)
             return {success : true, message: sec}
         } 
         catch (error) {
-            server.writeLogs(Fd["Error"], "erreur :", err)
+            server.writeLog(server.logFd["Error"], "erreur :", err)
             return {success : false, message: 0}
         }
     })

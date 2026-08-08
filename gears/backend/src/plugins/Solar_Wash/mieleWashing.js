@@ -76,18 +76,32 @@ const programs = {
   190: { name: 'ECO 40-60', duration: 210 },
 };
 
-async function savePrgmDb(server, userId, body)
+async function savePrgmDb(server, userId, request)
 {
-	server.writeLogs(["Test"], "SAVE",userId, body)
+	const body = request.body;
+	const deviceId = request.params
+	server.writeLogs(["Test"], "SAVE", userId, body, deviceId)
 	if (!body) return;
 	const prgm = programs[body.programId].name;
-	const date = new Date()
-	const timeLeft = programs[body.programId].duration + body.startTime[0]*60 + body.startTime[1];
-	// server.createNotif(1, body.startTime);
-	server.createNotif(1, [0, 5]);
+	const date = new Date(new Date().getTime() - (60000)) //1 minutes less
+	const del = (body.startTime[0] * 60 + body.startTime[1] - 1) * 60 * 1000
+	const start = new Date(new Date().getTime() + del)
+	const endPrgm = [request.body.startTime[0], request.body.startTime[1] + request.body.duration]
+	date.setSeconds(50) // but set a 50 sec to be launched when cron turn
+	start.setSeconds(50)
 
-	server.writeLogs(["Test"], "timeleft", timeLeft)
-	await server.prisma.washing_Program.create({data: {type: prgm, time: date, finished : false, authorId : userId }})
+	const newPrgm = await server.prisma.washing_Program.create({
+		data: {
+			name: prgm, 
+			type: body.programId,
+			createdAt: date, 
+			startAt : start,
+			finished : "En attente", 
+			authorId : userId,
+			deviceId : body.deviceId
+		}})
+	server.sendNotif(1); //saved
+	server.createNotif(3, endPrgm, newPrgm.id); //theoric end of Prgm
 	//TODO NOTIF at body.startTime[0]*60 + body.startTime[1] + temps du prgm
 }
 

@@ -8,11 +8,11 @@ export default fp(async (server) => {
     const dataToday = await server.prisma.weather_Forecast.findMany({where: {time: {gte: todayStart}}});
     if (dataToday.length === 0)
     {
-        server.writeLogs(["Server"], "Getting new weather data")
+        server.writeLogs(["Server"], "Weather : Getting new data")
         await fetchWeatherData(server);
     }
     else
-    {server.writeLogs(["Server"], "Already got weather data")}
+    {server.writeLogs(["Server"], "Weather : Already got data")}
 
     async function fetchWeatherData(server) {
         const LAT=process.env.LAT;

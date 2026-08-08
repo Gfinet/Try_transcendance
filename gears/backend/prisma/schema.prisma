@@ -39,11 +39,15 @@ model Solar_Data {
 
 model Washing_Program {
   id            Int       @id @default(autoincrement())
-  type          String
-  time          DateTime  @default(now()) @db.Timestamptz(3)
-  finished      Boolean   @default(false)
+  deviceId      String
+  type          Int
+  name          String
+  createdAt     DateTime  @default(now()) @db.Timestamptz(3)
+  startAt       DateTime 
+  finished      String    
   authorId      Int
-  author        User   @relation(fields: [authorId], references: [id])
+  author        User      @relation(fields: [authorId], references: [id])
+  notifs        PushNotif[]
 }
 
 model Miele_Token {
@@ -69,8 +73,10 @@ model PushSubscription {
 }
 
 model PushNotif {
-  id         Int       @id @default(autoincrement())
-  createdAt  DateTime  @default(now()) @db.Timestamptz(3)
-  sendAt     DateTime  @default(now()) @db.Timestamptz(3)
-  type       Int
+  id            Int             @id @default(autoincrement())
+  createdAt     DateTime        @default(now()) @db.Timestamptz(3)
+  sendAt        DateTime        @default(now()) @db.Timestamptz(3)
+  type          Int
+  programId     Int       
+  program       Washing_Program @relation(fields: [programId], references: [id], onDelete: Cascade)
 }
