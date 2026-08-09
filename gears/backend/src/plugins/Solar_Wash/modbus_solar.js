@@ -1,8 +1,7 @@
-import fp from 'fastify-plugin'
 import cron from 'node-cron';
 
 
-export default fp (async (server) =>
+export default async function modbusPlugin(server)
 {    
      const connectSMA = async () => {
         const response = await fetch('http://192.168.0.194/dyn/login.json', {
@@ -52,10 +51,6 @@ export default fp (async (server) =>
 
     let sid = null
 
-    cron.schedule('*/5 * * * *', async () => {
-        fetchSolarData(server).catch(err => server.writeLogs(["Error"], 'Fetch solaire échoué:', err.cause.message));
-    })
-
     async function fetchSolarData(server)
     {
         try {
@@ -82,5 +77,11 @@ export default fp (async (server) =>
             server.writeLogs(["Error"], 'Erreur lors du fetch solaire:', error);
         } 
     }
-})
-
+    const task = cron.schedule('*/5 * * * *', async () => {
+        fetchSolarData(server).catch(err => server.writeLogs(["Error"], 'Fetch solaire échoué:', err.cause.message));
+    })
+    server.addHook('onClose', (instance, done) => {
+        task.stop();
+        done();
+    });
+}

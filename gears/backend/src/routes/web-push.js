@@ -30,32 +30,12 @@ export default fp(async (server) => {
 					auth: subscription.keys.auth
 				}
 			})
-			// subscriptions.push(subscription);
-			// console.log("enregistrement", subscription)
 		}
 
 		return reply.code(201).send({ success: true, message: 'Abonné avec succès !' });
 	});
 
 
-	// 3. Route d'exposé HTTP (si vous voulez tester manuellement via Postman/cURL)
-	// server.post('/send-notification', async (request, reply) => {
-	// 	await server.sendNotif({
-	// 		title: 'Nouveau message !',
-	// 		body: 'Votre machine Miele a terminé son cycle 🧺',
-	// 		icon: '/favicon.png',
-	// 	});
-
-	// 	return { success: true, message: 'Notifications envoyées' };
-	// });
 });
 
-/*
 
-await server.sendNotif({
-      title: 'Lavage terminé 🧺',
-      body: 'Le cycle QuickPowerWash est terminé !',
-      icon: '/favicon.png',
-    });
-
-*/

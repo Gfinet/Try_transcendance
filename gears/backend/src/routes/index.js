@@ -9,16 +9,13 @@ import webpush from './web-push.js'
 
 
 export default async function (server, opts) {
-  // On enregistre les routes d'authentification
-  // Toutes les routes dans auth.js commenceront par /auth
-  await server.register(auth)
-  await server.register(SMA)
-  await server.register(mb)
-  await server.register(weather)
-  await server.register(miele)
-  await server.register(clim)
-  await server.register(webpush) 
 
-  // Toutes les routes dans tables.js commenceront par /tables
-//   await server.register(table, { prefix: '/tables' })
+  	server.register(auth)
+  	server.register(SMA)
+  	server.register(mb)
+  	server.register(weather)
+  	server.register(miele, { prefix: '/miele' })
+  	server.register(clim, { prefix: '/clim' })
+  	server.register(webpush)
+
 }

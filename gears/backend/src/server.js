@@ -1,5 +1,4 @@
 import Fastify from 'fastify'
-import bcrypt from 'bcrypt'
 import fastifyJwt from '@fastify/jwt';
 import 'dotenv/config';
 
@@ -10,7 +9,7 @@ import weather from './plugins/Solar_Wash/weather.js'
 import clim from './plugins/Clim/ClimHandler.js'
 import jwt from './plugins/jwt_auth.js'
 import webpush from './plugins/web-push.js'
-import ezviz from './plugins/Door_Cams/ezviz_cam.js'
+// import ezviz from './plugins/Door_Cams/ezviz_cam.js'
 
 import fs from 'fs'; //Logs
 import path from 'path';
@@ -48,7 +47,7 @@ const serverOn = async () => {
 	// console.log(server.logFd)
 
 	server.decorate('writeLogs', (fds, ...args) => {
-		fds.map(fd => {
+		fds.forEach(fd => {
 		const timestamp = new Date().toLocaleString('fr-FR', {timeZone: 'Europe/Paris'});
 		const formattedMessage = util.format(...args);
 		const output = `[${timestamp}] ${formattedMessage}\n`;
@@ -61,15 +60,16 @@ const serverOn = async () => {
 			fs.writeSync(server.logFd["Error"], errPut);
 	}})})
 
-	await server.register(fastifyJwt, {secret: process.env.JWT_SECRET });
+	server.register(fastifyJwt, {secret: process.env.JWT_SECRET });
 
 	const plugins = [jwt, prisma, mb, weather, webpush, miele, clim]
-	plugins.map(plug => server.register(plug));
+	plugins.forEach(plug => server.register(plug));
 
-	await server.register(routes, { prefix: '/api' });
+	server.register(routes, { prefix: '/api' });
 
 	const sendNotif = async (server) => {
-		// if (!server.hasPendingNotifs) return;
+		// console.log("Notifs?", server.hasPendingNotifs)
+		if (!server.hasPendingNotifs) return;
 		const notifs = await server.prisma.pushNotif.findMany({where : {sendAt : {lte : new Date()}}})
 		for (const one of notifs)
 		{
@@ -83,10 +83,12 @@ const serverOn = async () => {
 		}
 		const check = await server.prisma.pushNotif.findMany();
 		if (check.length == 0) server.hasPendingNotifs = false;
+		// console.log("Notifs?", server.hasPendingNotifs)
 	}
 
 	const launchWash = async (server) => {
-		// if (!server.hasPendingPrgm) {server.writeLogs(["Test"], "noprgm"); return;}
+		// console.log("Programs?", server.hasPendingPrgm)
+		if (!server.hasPendingPrgm) {server.writeLogs(["Test"], "noprgm"); return;}
 		const prgm = await server.prisma.washing_Program.findFirst({
 			where : {startAt: {lte: new Date()}, finished : "En attente"},
 			orderBy: {createdAt: 'desc'},
@@ -116,26 +118,22 @@ const serverOn = async () => {
 				})
 			}
 		}
-		
+		const check = await server.prisma.washing_Program.findMany({where : {finished : "En attente"}});
+		if (check.length == 0) server.hasPendingPrgm = false;
+		// console.log("Programs?", server.hasPendingPrgm)
+
 	}
 	
 	const repeatTask = cron.schedule("* * * * *", async () => {
 		await sendNotif(server);
 		await launchWash(server);
 	}, {scheduled: true, timezone: "Europe/Paris"})
-	repeatTask.start()
 
+	server.addHook('onClose', (instance, done) => {
+        repeatTask.stop();
+        done();
+    });
 
-	const user = await server.prisma.user.findUnique({ where: { username: "Parents" }})
-	if (server.prisma && !user)
-	{
-		const mdp = await bcrypt.hash("chocolat", 12)
-		await server.prisma.User.create({data: {username: "Parents", password_hash: mdp }})
-	}
-
-	server.get('/api', function (request, reply) {
-		reply.send({ hello: 'world' })
-	})
 
   	return server
 }

@@ -2,12 +2,10 @@ import 'dotenv/config';
 
 export default async function miele(server) {
 
-    server.decorate('hasPendingPrgm', true);
-
-    server.post('/wash/list',
+    server.post('/list',
     { preHandler: [server.auth] },
     async (request, reply) =>{
-        server.writeLogs(["Request", "Server", "Miele"], request.user.name, "POST /wash/list")
+        server.writeLogs(["Request", "Server", "Miele"], request.user.name, "POST /miele/list")
         const number = request.body
         const line = await server.prisma.washing_Program.findMany( {take: number, orderBy: { createdAt: 'desc'}, include: {author: {select: {username: true}}}})
         if (line)
@@ -15,10 +13,10 @@ export default async function miele(server) {
         else
             return { success: false, message: "No Data" }
     })
-    server.get('/wash/list',
+    server.get('/list',
     { preHandler: [server.auth] },
     async (request, reply) =>{
-        server.writeLogs(["Request", "Server", "Miele"], request.user.name, "GET /wash/list")
+        server.writeLogs(["Request", "Server", "Miele"], request.user.name, "GET /miele/list")
         const line = await server.prisma.washing_Program.findMany( {
             take: 5, 
             orderBy: { createdAt: 'desc'}, 
@@ -31,7 +29,7 @@ export default async function miele(server) {
     })
 
 
-    server.get('/miele/callback', 
+    server.get('/callback', 
     async (request, reply) =>{
         server.writeLogs(["Request", "Server", "Miele"], "GET /miele/callback")
         const {code, state} = request.query
@@ -80,7 +78,7 @@ export default async function miele(server) {
         return reply.redirect('/schedule?miele=success');
     })
 
-    server.get('/miele/token', 
+    server.get('/token', 
     { preHandler: [server.auth] },
     async (request, reply) =>{
         server.writeLogs(["Request", "Server", "Miele"], request.user.name, "GET /miele/token")
@@ -95,7 +93,7 @@ export default async function miele(server) {
 
     })
 
-    server.get('/miele/connect', 
+    server.get('/connect', 
     { preHandler: [server.auth] }, 
     async (request, reply) => {
         server.writeLogs(["Request", "Server", "Miele"], request.user.name, "GET /miele/connect")
@@ -116,7 +114,7 @@ export default async function miele(server) {
         
     })
 
-    server.get('/miele/devices', 
+    server.get('/devices', 
     { preHandler: [server.auth] }, 
     async (request, reply) => {
         server.writeLogs(["Request", "Server", "Miele"], request.user.name, "GET /miele/devices")
@@ -139,7 +137,7 @@ export default async function miele(server) {
         return [];
     });
 
-    server.get('/miele/devices/:deviceId', //?language=fr
+    server.get('/devices/:deviceId', //?language=fr
     { preHandler: [server.auth] },
     async (request, reply) => {
         server.writeLogs(["Request", "Server", "Miele"], request.user.name, "GET /miele/devices/:deviceId")
@@ -163,7 +161,7 @@ export default async function miele(server) {
         return []; 
     });
 
-    server.get('/miele/devices/:deviceId/programs', //?language=fr
+    server.get('/devices/:deviceId/programs', //?language=fr
     { preHandler: [server.auth] },
     async (request, reply) => {
 
@@ -191,7 +189,7 @@ export default async function miele(server) {
     });
     
 
-    server.put('/miele/devices/:deviceId/actions', //?language=fr
+    server.put('/devices/:deviceId/actions', //?language=fr
     { preHandler: [server.auth] },
     async (request, reply) => {
         server.writeLogs(["Request", "Server", "Miele"], request.user.name, "PUT /miele/devices/:deviceId/actions")
@@ -221,7 +219,7 @@ export default async function miele(server) {
     });
 
 
-    server.get('/miele/devices/:deviceId/actions', //?language=fr
+    server.get('/devices/:deviceId/actions', //?language=fr
     { preHandler: [server.auth] },
     async (request, reply) => {
         server.writeLogs(["Request", "Server", "Miele"], request.user.name, "GET /miele/devices/:deviceId/actions")
@@ -250,7 +248,7 @@ export default async function miele(server) {
         return { success: false }; 
     });
 
-    server.put('/miele/devices/:deviceId/programs', //?language=fr
+    server.put('/devices/:deviceId/programs', //?language=fr
     { preHandler: [server.auth] },
     async (request, reply) => {
         server.writeLogs(["Request", "Server", "Miele"], request.user.name, "PUT /miele/devices/:deviceId/programs")
@@ -266,10 +264,6 @@ export default async function miele(server) {
         
     });
 }
-
-    // server.put('https://api.mcs3.miele.com/v1/devices/){deviceId}/actions', async (request, reply) => {
-
-    // })
     
 
 

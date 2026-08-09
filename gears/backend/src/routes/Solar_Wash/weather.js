@@ -1,7 +1,7 @@
 
 
 
-export default async function auth(server) {
+export default async function weather(server) {
 
     server.get('/temptoday',
     { preHandler: [server.auth] },

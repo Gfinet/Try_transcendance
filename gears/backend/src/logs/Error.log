@@ -496,3 +496,16 @@
 [08/08/2026 22:10:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
     at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[09/08/2026 02:35:00] Erreur lors du fetch solaire: ReferenceError: server is not defined
+    at getValuesSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:48:9)
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:56:26)
+    at cron.schedule.scheduled (file:///data/src/plugins/Solar_Wash/modbus_solar.js:83:9)
+    at Runner.onMatch (/data/node_modules/node-cron/dist/esm/tasks/inline-scheduled-task.js:69:20)
+    at Timeout._onTimeout (/data/node_modules/node-cron/dist/esm/scheduler/runner.js:70:55)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+[09/08/2026 02:50:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[09/08/2026 02:50:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:61:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

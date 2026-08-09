@@ -1,7 +1,6 @@
-import fp from 'fastify-plugin'
 
 
-export default fp(async (server) => {
+export default async function weatherPlugin(server){
     const todayStart = new Date();
     todayStart.setHours(0, 0, 0, 0);
 
@@ -39,4 +38,4 @@ export default fp(async (server) => {
             });
         }
     }
-})
+}

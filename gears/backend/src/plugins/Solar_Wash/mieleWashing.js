@@ -102,10 +102,13 @@ async function savePrgmDb(server, userId, request)
 		}})
 	server.sendNotif(1); //saved
 	server.createNotif(3, endPrgm, newPrgm.id); //theoric end of Prgm
+	server.hasPendingPrgm = true;
 	//TODO NOTIF at body.startTime[0]*60 + body.startTime[1] + temps du prgm
 }
 
 export default fp(async (server)=>{
+	
+	server.decorate('hasPendingPrgm', true);
     server.decorate('miele', {
 		getToken: async (userId, server) => getValidMieleToken(userId, server), 
 		saveDb: async (server, userId, body) => savePrgmDb(server, userId, body),

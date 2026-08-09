@@ -1,14 +1,10 @@
-import fp from 'fastify-plugin' // Aide à rendre prisma accessible partout
-
-
-const base_url = "https://sandbox.smaapis.de/monitoring/v1/devices/14496865/lean"
-
-let uri = "v1/devices/14496865/lean"
 
 
 
 export default async function getVal(server)
 {
+    const base_url = "https://sandbox.smaapis.de/monitoring/v1/devices/14496865/lean"
+
     server.get('/sma',
     { preHandler: [server.auth] },
     async (request, reply)=>

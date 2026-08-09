@@ -58,7 +58,7 @@ export const Fetches = () => {
   ////Db Washing Prog
   const fetchDbWashingProg = async (setWash) => {
     const token = localStorage.getItem('token');
-    fetch('/api/wash/list', {
+    fetch('/api/miele/list', {
       method: 'POST',
       body: 5,
       headers: {
