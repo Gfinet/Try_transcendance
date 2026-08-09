@@ -2,7 +2,10 @@ const realTimeRegister = 100;
 
 export default async function modbus(server)
 {
-    server.get('/mb',  async (request, reply)=>{
+    server.get('/mb', 
+    { preHandler: [server.auth] },
+    async (request, reply)=>{
+        server.writeLogs(["Request", "Server"], request.user.name, "GET /mb")
         try {
             const response = await server.mb.readInputRegisters(realTimeRegister, 2)
 
@@ -14,16 +17,19 @@ export default async function modbus(server)
         }
         catch (err)
         {
-            console.error("erreur :", err)
+            server.writeLog(server.logFd["Error"], "erreur :", err)
             return {success : false, message: 0}
         }
     });
 
-    server.get('/mbtoday', async (request,reply) =>{
+    server.get('/mbtoday',
+    { preHandler: [server.auth] },
+    async (request,reply) =>{
+        server.writeLogs(["Request", "Server"], request.user.name, "GET /mbtoday")
         try {
             const now = new Date()
-            const start = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1)
-            start.setHours(21, 59, 59, 999);
+            const start = new Date(now.getTime() - (24 * 60 * 60 * 1000))
+            // start.setHours(21, 59, 59, 999);
 
             const today = await server.prisma.Solar_Data.findMany({ where: { hour: {gte : start, lte: now}}, orderBy: {hour: 'asc'}})
             // console.log("Waza",start, end, today)
@@ -39,7 +45,7 @@ export default async function modbus(server)
             return {success : true, message: sec}
         } 
         catch (error) {
-            console.error("erreur :", err)
+            server.writeLog(server.logFd["Error"], "erreur :", err)
             return {success : false, message: 0}
         }
     })

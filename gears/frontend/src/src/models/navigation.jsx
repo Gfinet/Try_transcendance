@@ -11,13 +11,15 @@ export const AppNavigation = () => {
         '/schedule', 
         '/table', 
         '/cams', 
-        '/setPrgm'
+        '/setPrgm',
+        '/fast'
     ]
 
     const goToDash = () => navigate('/dashboard');
     const goToSchedule = () => navigate('/schedule');
     const goToTable = () => navigate('/table');
     const goToCams = () => navigate('/cams');
+    const goToFast = () => navigate('/fast');
     const Logout = () =>  {
         localStorage.removeItem('token');
         navigate('/');
@@ -28,6 +30,7 @@ export const AppNavigation = () => {
         goToSchedule,
         goToTable,
         goToCams,
+        goToFast,
         Logout,
     };
 }

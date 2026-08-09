@@ -1,0 +1,511 @@
+[07/08/2026 12:15:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:8:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:68:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[07/08/2026 12:30:45] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:30:45 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:31:28] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:31:28 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:31:39] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:31:39 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:34:13] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:34:13 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:34:57] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:34:57 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:36:56] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:36:56 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:36:59] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:36:59 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:37:02] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:37:02 GMT',
+    'content-type': 'application/json',
+    'content-length': '38',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:47:45] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:47:45 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 12:50:20] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 10:50:20 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:06:56] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:06:56 GMT',
+    'content-type': 'application/json',
+    'content-length': '76',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true },
+  bodyUsed: false,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:06:56] Miele PUT :deviceId/programs error response Response {
+  status: 400,
+  statusText: 'Bad Request',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:06:56 GMT',
+    'content-type': 'application/json',
+    'content-length': '76',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: false,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:07:14] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:07:14 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 13:13:08] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:13:08 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: false, state: 'readable', supportsBYOB: true },
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+}
+[07/08/2026 13:14:46] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:14:46 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+}
+
+
+
+
+[07/08/2026 13:21:58] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:21:58 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+} 
+ {
+  processAction: [],
+  light: [],
+  ambientLight: [],
+  startTime: [],
+  ventilationStep: [],
+  programId: [],
+  targetTemperature: [],
+  deviceName: true,
+  powerOn: false,
+  powerOff: true,
+  colors: [],
+  modes: [],
+  runOnTime: []
+}
+[07/08/2026 13:24:40] Miele GET :deviceId/actions response Response {
+  status: 200,
+  statusText: 'OK',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:24:40 GMT',
+    'content-type': 'application/json',
+    'content-length': '211',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    vary: 'Accept-Encoding',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: ReadableStream { locked: true, state: 'closed', supportsBYOB: true },
+  bodyUsed: true,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/actions'
+} 
+ {
+  processAction: [],
+  light: [],
+  ambientLight: [],
+  startTime: [],
+  ventilationStep: [],
+  programId: [],
+  targetTemperature: [],
+  deviceName: true,
+  powerOn: false,
+  powerOff: true,
+  colors: [],
+  modes: [],
+  runOnTime: []
+}
+[07/08/2026 13:59:02] Miele PUT :deviceId/programs error response Response {
+  status: 204,
+  statusText: 'No Content',
+  headers: Headers {
+    date: 'Fri, 07 Aug 2026 11:59:02 GMT',
+    'content-type': 'application/octet-stream',
+    connection: 'keep-alive',
+    'access-control-allow-credentials': 'true',
+    'access-control-allow-headers': 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Client-Identifier',
+    'access-control-allow-methods': 'GET, PUT, POST, OPTIONS',
+    'access-control-allow-origin': '*',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains',
+    'x-environment': 'mcs-eu-prod-std, mcs-eu-prod-default'
+  },
+  body: null,
+  bodyUsed: false,
+  ok: true,
+  redirected: false,
+  type: 'basic',
+  url: 'https://api.mcs3.miele.com/v1/devices/000185936843/programs'
+}
+[07/08/2026 14:05:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[07/08/2026 14:05:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[07/08/2026 16:40:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[07/08/2026 16:40:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[08/08/2026 07:55:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[08/08/2026 07:55:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[08/08/2026 08:35:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[08/08/2026 08:35:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[08/08/2026 16:40:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[08/08/2026 16:40:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[08/08/2026 17:50:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[08/08/2026 17:50:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[08/08/2026 20:35:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:8:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:68:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[08/08/2026 20:50:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[08/08/2026 20:50:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[08/08/2026 22:10:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[08/08/2026 22:10:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:65:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[09/08/2026 02:35:00] Erreur lors du fetch solaire: ReferenceError: server is not defined
+    at getValuesSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:48:9)
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:56:26)
+    at cron.schedule.scheduled (file:///data/src/plugins/Solar_Wash/modbus_solar.js:83:9)
+    at Runner.onMatch (/data/node_modules/node-cron/dist/esm/tasks/inline-scheduled-task.js:69:20)
+    at Timeout._onTimeout (/data/node_modules/node-cron/dist/esm/scheduler/runner.js:70:55)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+[09/08/2026 02:50:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[09/08/2026 02:50:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:61:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

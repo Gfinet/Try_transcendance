@@ -1,8 +1,7 @@
-import fp from 'fastify-plugin'
 import cron from 'node-cron';
 
 
-export default fp (async (server) =>
+export default async function modbusPlugin(server)
 {    
      const connectSMA = async () => {
         const response = await fetch('http://192.168.0.194/dyn/login.json', {
@@ -16,7 +15,7 @@ export default fp (async (server) =>
     }
     const getValuesSMA = async (sid) => {
         try {
-            console.log("SID", sid)
+            server.writeLogs(["Server"], "SID", sid)
             if (sid === null) return {err : 1}
             const response = await fetch(`http://192.168.0.194/dyn/getValues.json?sid=${sid}`, {
                 method : 'POST',
@@ -27,8 +26,8 @@ export default fp (async (server) =>
             const data = await response.json();
             
             if (data.err) return data
-            // console.log("Instant Sma ", data.result[Sma.Id][Sma.Instant]['1'])
-            // console.log("Day     Sma ", data.result[Sma.Id][Sma.Day]['1'])
+            // server.writeLogs(["Test"], "Instant Sma ", data.result[Sma.Id][Sma.Instant]['1'])
+            // server.writeLogs(["Test"], "Day     Sma ", data.result[Sma.Id][Sma.Day]['1'])
 
             const Val = {
                 total : data.result[Sma.Id][Sma.Day]["1"][0].val,
@@ -37,7 +36,7 @@ export default fp (async (server) =>
             }
             return Val
         } catch (error) {
-            console.error('Erreur lors de la connexion SMA:\n\t', error.cause.message);
+            server.writeLogs(["Error"], 'Erreur lors de la connexion SMA:\n\t', error.cause.message);
             return null
         }
     }
@@ -51,10 +50,6 @@ export default fp (async (server) =>
     }
 
     let sid = null
-
-    cron.schedule('*/5 * * * *', async () => {
-        fetchSolarData(server).catch(err => console.error('Fetch solaire échoué:', err.cause.message));
-    })
 
     async function fetchSolarData(server)
     {
@@ -79,8 +74,14 @@ export default fp (async (server) =>
                 }})
         } 
         catch (error) {
-            console.error('Erreur lors du fetch solaire:', error);
+            server.writeLogs(["Error"], 'Erreur lors du fetch solaire:', error);
         } 
     }
-})
-
+    const task = cron.schedule('*/5 * * * *', async () => {
+        fetchSolarData(server).catch(err => server.writeLogs(["Error"], 'Fetch solaire échoué:', err.cause.message));
+    })
+    server.addHook('onClose', (instance, done) => {
+        task.stop();
+        done();
+    });
+}

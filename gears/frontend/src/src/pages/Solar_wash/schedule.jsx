@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react'
-import { MyLineChart, MyBarChart, TimeSlider } from '../../models/charts'
-import { AppNavigation } from '../../models/navigation';
+import { MyLineChart, MyBarChart, TimeSlider } from '../../class/charts'
 import { Fetches } from '../../models/fetchData';
-import { WashTable } from '../../models/washTable';
+import { WashInfo } from '../../class/washTable';
 import { globalDiv, buttonDiv, chartDiv, blueButton, greyButton } from '../../models/styles';
 
 import '../../App.css'
 
 function Schedule() {
   
-  const {goToDash, goToTable, Logout} = AppNavigation();
   const {fetchTemp, fetchWatt, fetchDbWashingProg, fetchWashDevices, fetchDevInfo} = Fetches()
 
 
@@ -32,50 +30,60 @@ function Schedule() {
     setSelectedDevice(e.target.value);
     if (e.target.value !== "/") fetchDevInfo(setDevInfo, e.target.value);
     else                        setDevInfo(null)
-    console.log("devInfo",devInfo)
+    console.log("devInfo",JSON.stringify(devInfo))
   };
+
+  const Now = new Date().toLocaleString('fr-BE', { hour: '2-digit', timeZone: 'Europe/Brussels' });
 
   useEffect(() => {
     fetchTemp(data => {
       setTemp(data);
-      const idx14 = data.findIndex(d => d.time.startsWith('14'));
-        setTempCenter(idx14 !== -1 ? idx14 : Math.floor(data.length / 2));
+      const idxNow = data.findIndex(d => d.time.startsWith(Now.slice(0, 2)));
+      setTempCenter(idxNow !== -1 ? idxNow : Math.floor(data.length / 2));
     });
     fetchWatt(data => {
       setWatt(data);
-      const idx14 = data.findIndex(d => d.time.startsWith('14'));
-      setWattCenter(idx14 !== -1 ? idx14 : Math.floor(data.length / 2));
+      const idxNow = data.findIndex(d => d.time.startsWith(Now.slice(0, 2)));
+      setWattCenter(idxNow !== -1 ? idxNow : Math.floor(data.length / 2));
     });
-    console.log("getting db Progrm")
+    // console.log("getting db Progrm")
     fetchDbWashingProg(setWash);
     
     const checkConnect = async () =>{
       const connected = await isMieleConnected();
       if (connected === true) 
       {
-        console.log("getting devices")
+        // console.log("getting devices")
         setMieleConnected(1);
         fetchWashDevices(setDevices);
       }
     }
     checkConnect()
-    
   }, []);
+
+  useEffect(() => {
+    if (selectedDevice === '/') return;
+
+    const intervalId = setInterval(() => {refreshDevInfo()}, 30000);
+
+    return () => clearInterval(intervalId);
+  }, [selectedDevice]);
+
 
   const tempSlice = temp.slice(
     Math.max(0, tempCenter - WIN),
     Math.min(temp.length, tempCenter + WIN + 1)
   );
   const wattSlice = watt.slice(
-    Math.max(0, wattCenter - WIN),
-    Math.min(watt.length, wattCenter + WIN + 1)
+    Math.max(0, wattCenter - WIN * 12),
+    Math.min(watt.length, wattCenter + WIN * 12 + 1)
   );
 
   const chartData = {
         //title       data          valx      valy              unit               total
     w : {t : "Meteo", d: tempSlice, x:"time", y: "temperature", u:'°'},
     e : {t : "Electricite des panneaux", d: wattSlice, x:"time", y: "watt", u:'w', tt: watt.total},
-    r : {t : "Rayonnement solaire", d: tempSlice, x:"time", y: "sun", u:'w/m2'}
+    r : {t : "Rayonnement solaire", d: tempSlice, x:"time", y: "sun", u:'w'}
   }
   const c = "#fbbf24"
   
@@ -86,6 +94,11 @@ function Schedule() {
       headers: {
         'Authorization': `Bearer ${token}`,
     }})
+    
+    if (response.status === 401) {
+      localStorage.removeItem('token'); // Nettoie le token périmé
+      navigate('/login');               // Renvoie vers le login
+    }
     const data = await response.json();
     // console.log("data",data)
     return data.success
@@ -102,42 +115,33 @@ function Schedule() {
     window.location.href = data.url;
   };
 
-  const refreshDevInfo = () => {
+  const refreshDevInfo = async () => {
     if (selectedDevice !== '/')
       fetchDevInfo(setDevInfo, selectedDevice);
   };
 
-  const scheduleProgram = () =>{
-
-    console.log("check Connect to Miele")
-    console.log("check connect to machine")
-    console.log("selecting programs")
-    console.log("adding program to db")
-    console.log("confirmation")
-    console.log("program added")
-  }
-
   
   return (
     <div style={globalDiv}>
-      <h1>Bienvenue sur l'espace Machine</h1>
+      <h1 style={{color:'white'}}>Bienvenue sur l'espace Machine</h1>
         
       <div style={washHeaderDiv}>
         <span style={{...washHeaderCell, width:'20%'}}>Date</span>
         <span style={{...washHeaderCell, width:'30%'}}>Programme</span>
-        <span style={{...washHeaderCell, width:'30%'}}>Autheur</span>
+        <span style={{...washHeaderCell, width:'30%'}}>Auteur</span>
         <span style={{...washHeaderCell, width:'20%', justifyContent:'flex-end'}}>Terminé?</span>
       </div>
-
-      {wash.slice(0, 5).map((program) => (
+      {(wash.length > 0) ? 
+      (<>
+        {wash.slice(0, 5).map((program) => (
         <div key={program.id} style={washRowDiv}>
-          <span style={{ color: '#888', fontSize: '0.9rem' }}>
-            {new Date(program.time).toLocaleString('fr-FR', { 
+          <span style={{ color: '#888', fontSize: '0.65rem' }}>
+            {new Date(program.createdAt).toLocaleString('fr-FR', { 
               day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' 
             })}
           </span>
-          <span style={{ fontWeight: 'bold', color: '#555' }}>
-            Type {program.type}
+          <span style={{ fontWeight: 'bold', color: '#555', fontSize:'0.8rem' }}>
+            {program.name}
           </span>
           <span style={{ fontWeight: 'bold', color: '#555' }}>
             {program.author.username}
@@ -146,13 +150,17 @@ function Schedule() {
             padding: '4px 8px', 
             borderRadius: '12px', 
             fontSize: '0.8rem',
-            backgroundColor: program.finished ? '#d4edda' : '#fff3cd',
-            color: program.finished ? '#155724' : '#856404'
+            backgroundColor: program.finished  === "Terminé" ? '#d4edda' : '#fff3cd',
+            color: program.finished === "Terminé" ? '#155724' : '#856404'
           }}>
-            {program.finished ? 'Terminé' : 'En cours'}
+            {program.finished}
           </span>
         </div>
-      ))}
+        ))}
+      </>) : 
+      (<p>No Data</p>) 
+      }
+      
 
       <div style={{...buttonDiv, marginTop: '1rem'}}>
         <button style={{...blueButton, width : "100%"}} onClick={MieleConnect}>Conexion a Miele</button>
@@ -198,27 +206,7 @@ function Schedule() {
               </option>
             ))}
           </select>
-          {(selectedDevice !== "/" && devInfo !== null) ? (
-            <div style={Table}>
-              <div style={Row}>
-                <h2 style={txt}>Infos:</h2></div>
-              <div style={Row}>
-                <h2 style={txt}>Status:</h2>
-                {(devInfo.state.status) ? 
-                ( <h2 style={txt}>{devInfo.state.status.value_localized}</h2> ) :
-                ( <h2 style={txt}>ERROR</h2> )
-                }
-              </div> 
-              <WashTable devInfo={devInfo} onAction={refreshDevInfo} />
-
-            </div>
-          ) : (
-            <>
-              <div style={{...Row, alignSelf:'center'}}>
-                <h2 style={{color: 'white'}}>No machine picked</h2>
-              </div>
-            </>
-          )}
+          <WashInfo devInfo={devInfo} selectedDevice={selectedDevice} onRefresh={refreshDevInfo}/>
         </div>
       )}
     </div>
@@ -262,27 +250,6 @@ const formDiv = {
 const selectStyle = { 
   padding: '8px',
   width: '100%',
-}
-
-const Table = {
-  width: '100%',
-  backgroundColor:'grey',
-  justifyContent: 'space-between',
-  borderRadius: '5px',
-}
-
-const Row ={
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  width : 'auto',
-  height : 'auto'
-
-}
-
-const txt = {
-  color:'black',
-  fontSize: '15px'
 }
 
 export default Schedule

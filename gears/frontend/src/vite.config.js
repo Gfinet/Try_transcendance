@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-  allowedHosts: ['frontend', 'solar-cams'],
+  allowedHosts: ['frontend', 'solar-cams', "solar-cams.tail2d5e25.ts.net"],
   },
 })
 

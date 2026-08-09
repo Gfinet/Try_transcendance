@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { MyCam } from '../../models/myCam';
+import { MyCam } from '../../class/myCam';
 import { AppNavigation } from '../../models/navigation';
 import { blueButton, greenButton, redButton } from '../../models/styles';
 
@@ -8,8 +8,8 @@ import '../../App.css'
 
 function Cams()
 {
-    const streamGarage  = ""; //"/go2rtc/webrtc.html?src=garage&mode=ws";
-    const streamSonette = ""; //"/go2rtc/webrtc.html?src=sonette&mode=ws";
+    const streamGarage  = "/go2rtc/webrtc.html?src=garage&mode=ws";
+    const streamSonette = "/go2rtc/webrtc.html?src=sonette&mode=ws";
     const {goToDash} = AppNavigation();
 
     const fenetreRef = useRef(null);
@@ -19,11 +19,10 @@ function Cams()
 
     return (
         <div style={globalDiv}>
-            <p style={titleStyle}>🔴 Garage</p>
-            <MyCam source={streamGarage}/>
-            <p style={titleStyle}>🔴 Sonette</p>
-            <MyCam source={streamSonette}/>
-
+            <div style={camDiv}>
+                <MyCam source={streamGarage} title={"🔴 Garage"}/>
+                <MyCam source={streamSonette} title={"🔴 Sonette"}/>
+            </div>
             <div style={actionDiv}>
                 <button style={greenButton} onClick={showMiniWindow}>Ouvrir la porte</button>
                 <dialog style={dialogStyle} ref={fenetreRef}>
@@ -49,11 +48,10 @@ const globalDiv = {
     flexDirection: 'column',
 };
 
-const titleStyle = {
-    textAlign: 'center',
-    marginTop: '10px',
-    color: '#666',
-};
+const camDiv = {
+    display: 'flex',
+    flexDirection: 'row',
+}
 
 const actionDiv = {
     display: 'flex',

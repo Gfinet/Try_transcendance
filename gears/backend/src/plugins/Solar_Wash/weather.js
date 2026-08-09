@@ -1,18 +1,17 @@
-import fp from 'fastify-plugin'
-import { fetchWeatherApi } from "openmeteo";
-import cron from 'node-cron';
 
 
-export default fp(async (server) => {
+export default async function weatherPlugin(server){
     const todayStart = new Date();
     todayStart.setHours(0, 0, 0, 0);
 
     const dataToday = await server.prisma.weather_Forecast.findMany({where: {time: {gte: todayStart}}});
     if (dataToday.length === 0)
     {
-        console.log("Getting new weather data")
+        server.writeLogs(["Server"], "Weather : Getting new data")
         await fetchWeatherData(server);
     }
+    else
+    {server.writeLogs(["Server"], "Weather : Already got data")}
 
     async function fetchWeatherData(server) {
         const LAT=process.env.LAT;
@@ -39,4 +38,4 @@ export default fp(async (server) => {
             });
         }
     }
-})
+}
