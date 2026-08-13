@@ -20,6 +20,7 @@ import cron from 'node-cron';
 import routes from './routes/index.js'
 
 
+
 const serverOn = async () => {
 
 	const customStream = {
@@ -38,15 +39,14 @@ const serverOn = async () => {
 
 
 
+	const logsDir = path.join(process.cwd(), 'src', 'logs');
+	fs.mkdirSync(logsDir, { recursive: true });
+
 	const logsFile = ["Server.log", "Prisma.log", "Miele.log", "Request.log", "Error.log", "Test.log", "Cron.log"]
 	const logsFd = Object.fromEntries(
 		logsFile.map(name => [name.slice(0, -4), fs.openSync(path.join(process.cwd(), 'src', 'logs', name), 'a')]))
-	const logsDir = path.join(process.cwd(), 'src', 'logs');
-	fs.mkdirSync(logsDir, { recursive: true });
-	
+		
 	server.decorate('logFd', logsFd);
-	// console.log(server.logFd)
-
 
 	server.decorate('writeLogs', (fds, ...args) => {
 		fds.forEach(fd => {
@@ -61,12 +61,6 @@ const serverOn = async () => {
 			const errPut = `[${timestamp}] ${errMsg}\n`;
 			fs.writeSync(server.logFd["Error"], errPut);
 	}})})
-	const cronLogger = {
-		info: (msg) => server.writeLogs(["Cron", "Server"], `[INFO] - ${msg}\n`),
-		warn: (msg) => server.writeLogs(["Cron", "Error"], `[WARN] - ${msg}\n`),
-		error: (msg) => server.writeLogs(["Cron", "Error"], `[ERROR] - ${msg}\n`),
-	};
-	server.decorate("cronLogger", cronLogger)
 
 	server.register(fastifyJwt, {secret: process.env.JWT_SECRET });
 
@@ -134,9 +128,13 @@ const serverOn = async () => {
 	}
 	
 	const repeatTask = cron.schedule("* * * * *", async () => {
-		await sendNotif(server);
-		await launchWash(server);
-	}, {scheduled: true, timezone: "Europe/Paris", logger: cronLogger})
+		try {
+			await sendNotif(server);
+			await launchWash(server);
+		} catch (error) {
+			server.writeLogs(["Server", "Cron"], `Erreur lors de l'exécution du CRON : ${err.message}`)
+		}
+	}, {scheduled: true, timezone: "Europe/Paris"})
 
 	server.addHook('onClose', (instance, done) => {
         repeatTask.stop();

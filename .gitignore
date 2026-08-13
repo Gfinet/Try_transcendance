@@ -5,6 +5,8 @@
 */package-lock.json
 */node_modules
 gears/backend/package-lock.json
+gears/backend/src/logs
+
 gears/fontend/src/package-lock.json
 gears/fontend/package-lock.json
 

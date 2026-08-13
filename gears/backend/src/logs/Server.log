@@ -20077,3 +20077,104 @@ midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to applia
 [13/08/2026 14:22:37] FASTIFY: incoming request
 [13/08/2026 14:22:37] Xayling GET /clim/status
 [13/08/2026 14:22:41] FASTIFY: request completed
+[13/08/2026 14:23:37] FASTIFY: incoming request
+[13/08/2026 14:23:37] Xayling GET /clim/status
+[13/08/2026 14:23:41] FASTIFY: request completed
+[13/08/2026 14:24:37] FASTIFY: incoming request
+[13/08/2026 14:24:37] Xayling GET /clim/status
+[13/08/2026 14:24:37] FASTIFY: incoming request
+[13/08/2026 14:24:37] FASTIFY: incoming request
+[13/08/2026 14:24:37] Xayling GET /clim/status
+[13/08/2026 14:24:37] FASTIFY: request completed
+[13/08/2026 14:24:41] FASTIFY: request completed
+[13/08/2026 14:24:47] FASTIFY: incoming request
+[13/08/2026 14:24:47] Xayling GET /clim/status
+[13/08/2026 14:24:48] FASTIFY: incoming request
+[13/08/2026 14:24:48] FASTIFY: incoming request
+[13/08/2026 14:24:48] Xayling GET /mbtoday
+[13/08/2026 14:24:48] FASTIFY: request completed
+[13/08/2026 14:24:48] FASTIFY: request completed
+[13/08/2026 14:24:50] FASTIFY: incoming request
+[13/08/2026 14:24:50] FASTIFY: request completed
+[13/08/2026 14:24:52] FASTIFY: request completed
+[13/08/2026 14:24:52] FASTIFY: incoming request
+[13/08/2026 14:24:52] Xayling GET /clim/status
+[13/08/2026 14:24:56] FASTIFY: request completed
+[13/08/2026 14:25:00] SID null
+[13/08/2026 14:25:00] FASTIFY: incoming request
+[13/08/2026 14:25:00] Xayling GET /clim/status
+[13/08/2026 14:25:04] FASTIFY: request completed
+[13/08/2026 14:25:10] FASTIFY: incoming request
+[13/08/2026 14:25:10] Xayling GET /clim/status
+[13/08/2026 14:25:14] FASTIFY: request completed
+[13/08/2026 14:25:20] FASTIFY: incoming request
+[13/08/2026 14:25:20] Xayling GET /clim/status
+[13/08/2026 14:25:24] FASTIFY: request completed
+[13/08/2026 14:25:30] FASTIFY: incoming request
+[13/08/2026 14:25:30] Xayling GET /clim/status
+[13/08/2026 14:25:34] FASTIFY: request completed
+[13/08/2026 14:25:35] FASTIFY: incoming request
+[13/08/2026 14:25:35] FASTIFY: incoming request
+[13/08/2026 14:25:35] Xayling GET /mbtoday
+[13/08/2026 14:25:35] FASTIFY: request completed
+[13/08/2026 14:25:35] FASTIFY: request completed
+[13/08/2026 14:25:55] FASTIFY: incoming request
+[13/08/2026 14:25:55] Xayling GET /mbtoday
+[13/08/2026 14:25:55] FASTIFY: incoming request
+[13/08/2026 14:25:55] FASTIFY: request completed
+[13/08/2026 14:25:55] FASTIFY: request completed
+[13/08/2026 14:51:36] FASTIFY: Stopping Solar's_Cam platform
+[13/08/2026 14:51:36] FASTIFY: Solar's_Cam platform stopped
+[13/08/2026 14:51:38] Weather : Already got data
+[13/08/2026 14:51:38] FASTIFY: Server listening at http://127.0.0.1:3000
+[13/08/2026 14:51:38] FASTIFY: Server listening at http://172.24.0.5:3000
+[13/08/2026 14:51:43] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:52:04] FASTIFY: Stopping Solar's_Cam platform
+[13/08/2026 14:52:04] FASTIFY: Solar's_Cam platform stopped
+[13/08/2026 14:52:04] Weather : Already got data
+[13/08/2026 14:52:04] FASTIFY: Server listening at http://127.0.0.1:3000
+[13/08/2026 14:52:04] FASTIFY: Server listening at http://172.24.0.5:3000
+[13/08/2026 14:52:09] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:53:03] FASTIFY: Stopping Solar's_Cam platform
+[13/08/2026 14:53:03] FASTIFY: Solar's_Cam platform stopped
+[13/08/2026 14:53:03] Weather : Already got data
+[13/08/2026 14:53:03] FASTIFY: Server listening at http://127.0.0.1:3000
+[13/08/2026 14:53:03] FASTIFY: Server listening at http://172.24.0.5:3000
+[13/08/2026 14:53:08] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:53:56] FASTIFY: Stopping Solar's_Cam platform
+[13/08/2026 14:53:56] FASTIFY: Solar's_Cam platform stopped
+[13/08/2026 14:53:57] Weather : Already got data
+[13/08/2026 14:53:57] FASTIFY: Server listening at http://127.0.0.1:3000
+[13/08/2026 14:53:57] FASTIFY: Server listening at http://172.24.0.5:3000
+[13/08/2026 14:54:01] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:54:09] FASTIFY: incoming request
+[13/08/2026 14:54:09] Xayling GET /mbtoday
+[13/08/2026 14:54:09] FASTIFY: incoming request
+[13/08/2026 14:54:09] FASTIFY: request completed
+[13/08/2026 14:54:09] FASTIFY: request completed
+[13/08/2026 14:54:35] FASTIFY: incoming request
+[13/08/2026 14:54:35] FASTIFY: incoming request
+[13/08/2026 14:54:35] Xayling GET /mbtoday
+[13/08/2026 14:54:35] FASTIFY: request completed
+[13/08/2026 14:54:35] FASTIFY: request completed
+[13/08/2026 15:02:33] FASTIFY: Stopping Solar's_Cam platform
+[13/08/2026 15:02:33] FASTIFY: Solar's_Cam platform stopped
+[13/08/2026 15:02:34] Weather : Already got data
+[13/08/2026 15:02:34] FASTIFY: Server listening at http://127.0.0.1:3000
+[13/08/2026 15:02:34] FASTIFY: Server listening at http://172.24.0.5:3000
+[13/08/2026 15:02:38] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 15:04:40] FASTIFY: Stopping Solar's_Cam platform
+[13/08/2026 15:04:40] FASTIFY: Solar's_Cam platform stopped
+[13/08/2026 15:05:29] Weather : Already got data
+[13/08/2026 15:06:57] Weather : Already got data
+[13/08/2026 15:06:57] FASTIFY: Server listening at http://127.0.0.1:3000
+[13/08/2026 15:06:57] FASTIFY: Server listening at http://172.24.0.5:3000
+[13/08/2026 15:07:01] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 15:07:29] FASTIFY: Stopping Solar's_Cam platform
+[13/08/2026 15:07:29] FASTIFY: Solar's_Cam platform stopped
+[13/08/2026 15:07:30] Weather : Already got data
+[13/08/2026 15:08:52] Weather : Already got data
+[13/08/2026 15:08:52] FASTIFY: Server listening at http://127.0.0.1:3000
+[13/08/2026 15:08:52] FASTIFY: Server listening at http://172.24.0.5:3000
+[13/08/2026 15:08:57] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 15:10:00] SID null

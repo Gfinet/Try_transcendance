@@ -1397,3 +1397,47 @@ midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to applia
 [13/08/2026 14:21:03] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
 [13/08/2026 14:21:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
 [13/08/2026 14:22:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:23:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:24:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:24:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:24:52] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:24:56] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:25:04] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:25:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:7:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:63:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[13/08/2026 14:25:14] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:25:24] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:25:34] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:51:43] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:52:09] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:53:08] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:54:01] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 15:02:38] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 15:07:01] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 15:08:57] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 15:10:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:7:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:63:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
