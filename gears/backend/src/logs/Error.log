@@ -509,3 +509,891 @@
 [09/08/2026 02:50:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
     at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:61:25)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[09/08/2026 16:00:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[09/08/2026 16:00:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[09/08/2026 19:50:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[09/08/2026 19:50:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[09/08/2026 20:05:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[09/08/2026 20:05:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[09/08/2026 20:40:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[09/08/2026 20:40:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[09/08/2026 22:02:37] Clim inaccessible au démarrage: Command failed: midea-beautiful-air-cli status --ip 192.168.0.205 --key 0b1ea4216f9a4cc18fe278186db1445b63f468cc609e4a87a7e329914f0f54dc --token 57990FD6230F4A418DA83F3CB4D45D8D0D366950C87A767EB118D03070E9796956D15D3B31892DDEFA028E9104D0EDCD1720B79C96BE17C810D530A0510632CE
+
+[09/08/2026 23:30:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[09/08/2026 23:30:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[10/08/2026 12:10:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:7:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:63:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[10/08/2026 16:53:35] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[10/08/2026 18:25:11] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[10/08/2026 18:25:11] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[10/08/2026 19:55:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[10/08/2026 19:55:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[10/08/2026 21:20:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[10/08/2026 21:20:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[10/08/2026 21:40:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[10/08/2026 21:40:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[10/08/2026 22:30:10] Erreur lors de la connexion SMA:
+	 Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+[10/08/2026 22:30:10] Erreur lors du fetch solaire: TypeError: Cannot read properties of null (reading 'err')
+    at fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:60:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[13/08/2026 03:30:16] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:35:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:7:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:63:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[13/08/2026 03:39:34] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:40:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:7:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:63:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[13/08/2026 03:40:33] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:43:45] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:44:21] Clim inaccessible au démarrage: Error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+    at file:///data/src/plugins/Clim/ClimHandler.js:23:26
+    at ChildProcess.exithandler (node:child_process:424:5)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:519:28)
+    at Pipe.<anonymous> (node:net:347:12)
+[13/08/2026 03:44:53] Clim inaccessible au démarrage: Error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+    at file:///data/src/plugins/Clim/ClimHandler.js:23:26
+    at ChildProcess.exithandler (node:child_process:424:5)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:519:28)
+    at Pipe.<anonymous> (node:net:347:12)
+[13/08/2026 03:45:02] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:45:14] Clim inaccessible au démarrage: Error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+    at file:///data/src/plugins/Clim/ClimHandler.js:23:26
+    at ChildProcess.exithandler (node:child_process:424:5)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+[13/08/2026 03:45:38] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:46:32] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:46:42] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:46:52] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:47:02] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:47:12] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:47:22] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:47:32] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:48:13] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:48:23] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:48:33] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:48:43] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:48:53] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:49:03] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:49:13] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:49:23] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:49:33] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:50:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:7:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:63:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[13/08/2026 03:50:34] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:50:42] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:51:14] Clim inaccessible au démarrage: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:51:36] Clim status error: Traceback (most recent call last):
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1014, in appliance_state
+    response = sock.recv(512)
+               ^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/bin/midea-beautiful-air-cli", line 6, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 357, in cli
+    return function(args)
+           ^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/cli.py", line 158, in _run_status_command
+    appliance = appliance_state(
+                ^^^^^^^^^^^^^^^^
+  File "/root/.local/pipx/venvs/midea-beautiful-air/lib/python3.11/site-packages/midea_beautiful/lan.py", line 1038, in appliance_state
+    raise MideaNetworkError(
+midea_beautiful.exceptions.MideaNetworkError: Timeout while connecting to appliance 192.168.0.205:20086
+
+[13/08/2026 03:51:46] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:52:04] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:52:24] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:52:34] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:52:44] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:52:54] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:53:04] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:53:14] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:53:24] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 03:53:34] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:10:43] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:10:48] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:10:53] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:10:59] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:11:01] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:11:11] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:11:21] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:11:31] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:11:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:11:51] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:01] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:11] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:17] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:21] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:22] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:32] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:42] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:12:52] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:13:02] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+
+
+
+[13/08/2026 14:13:09] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:13:09] Clim status error: midea-beautiful-air-cli status --ip 192.168.0.205 --key 0b1ea4216f9a4cc18fe278186db1445b63f468cc609e4a87a7e329914f0f54dc --token 57990FD6230F4A418DA83F3CB4D45D8D0D366950C87A767EB118D03070E9796956D15D3B31892DDEFA028E9104D0EDCD1720B79C96BE17C810D530A0510632CE
+[13/08/2026 14:13:14] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:13:22] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:13:32] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:13:42] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:13:50] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:13:52] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:14:00] Clim status error: midea-beautiful-air-cli status --ip 192.168.0.205 --key 0b1ea4216f9a4cc18fe278186db1445b63f468cc609e4a87a7e329914f0f54dc --token 57990FD6230F4A418DA83F3CB4D45D8D0D366950C87A767EB118D03070E9796956D15D3B31892DDEFA028E9104D0EDCD1720B79C96BE17C810D530A0510632CE
+[13/08/2026 14:14:05] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:14:12] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:14:22] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:14:29] Clim status error: midea-beautiful-air-cli status --ip 192.168.0.205 --key 0b1ea4216f9a4cc18fe278186db1445b63f468cc609e4a87a7e329914f0f54dc --token 57990FD6230F4A418DA83F3CB4D45D8D0D366950C87A767EB118D03070E9796956D15D3B31892DDEFA028E9104D0EDCD1720B79C96BE17C810D530A0510632CE
+[13/08/2026 14:14:33] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:14:42] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:14:52] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:15:02] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:15:02] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:15:10] Erreur lors du fetch solaire: TypeError: fetch failed
+    at node:internal/deps/undici/undici:15157:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async connectSMA (file:///data/src/plugins/Solar_Wash/modbus_solar.js:7:26)
+    at async fetchSolarData (file:///data/src/plugins/Solar_Wash/modbus_solar.js:63:23) {
+  [cause]: ConnectTimeoutError: Connect Timeout Error (attempted address: 192.168.0.194:80, timeout: 10000ms)
+      at onConnectTimeout (node:internal/deps/undici/undici:2761:28)
+      at Immediate._onImmediate (node:internal/deps/undici/undici:2742:11)
+      at process.processImmediate (node:internal/timers:484:21) {
+    code: 'UND_ERR_CONNECT_TIMEOUT',
+    [Symbol(undici.error.UND_ERR)]: true,
+    [Symbol(undici.error.UND_ERR_CONNECT_TIMEOUT)]: true
+  }
+}
+[13/08/2026 14:15:12] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:15:31] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:15:35] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:15:42] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:15:52] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:02] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:12] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:18] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:22] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:22] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:27] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:32] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:42] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:16:51] Clim status error: midea-beautiful-air-cli status --ip 192.168.0.205 --key 0b1ea4216f9a4cc18fe278186db1445b63f468cc609e4a87a7e329914f0f54dc --token 57990FD6230F4A418DA83F3CB4D45D8D0D366950C87A767EB118D03070E9796956D15D3B31892DDEFA028E9104D0EDCD1720B79C96BE17C810D530A0510632CE
+[13/08/2026 14:16:56] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:17:02] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:17:13] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:17:22] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:17:32] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:17:42] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:17:52] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:18:02] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:18:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:19:24] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:19:40] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:19:42] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:19:53] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:19:59] Clim status error: midea-beautiful-air-cli status --ip 192.168.0.205 --key 0b1ea4216f9a4cc18fe278186db1445b63f468cc609e4a87a7e329914f0f54dc --token 57990FD6230F4A418DA83F3CB4D45D8D0D366950C87A767EB118D03070E9796956D15D3B31892DDEFA028E9104D0EDCD1720B79C96BE17C810D530A0510632CE
+[13/08/2026 14:20:04] Clim inaccessible au démarrage: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:20:13] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:20:23] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:20:33] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:20:43] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:20:53] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:21:03] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:21:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086
+[13/08/2026 14:22:41] Clim status error: Timeout while connecting to appliance 192.168.0.205:20086

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { MyLineChart, MyBarChart, TimeSlider } from '../../class/charts'
+import { MyLineChart, MyBarChart, MyComposeChart, TimeSlider } from '../../class/charts'
 import { Fetches } from '../../models/fetchData';
 import { WashInfo } from '../../class/washTable';
 import { globalDiv, buttonDiv, chartDiv, blueButton, greyButton } from '../../models/styles';
@@ -22,9 +22,8 @@ function Schedule() {
   // let mieleConnected;
 
   //  ±4 points de chaque côté
-  const WIN = 4;
+  const WIN = 7;
   const [tempCenter, setTempCenter] = useState(WIN);
-  const [wattCenter, setWattCenter] = useState(WIN);
 
   const changeDevice = (e) => {
     setSelectedDevice(e.target.value);
@@ -41,12 +40,7 @@ function Schedule() {
       const idxNow = data.findIndex(d => d.time.startsWith(Now.slice(0, 2)));
       setTempCenter(idxNow !== -1 ? idxNow : Math.floor(data.length / 2));
     });
-    fetchWatt(data => {
-      setWatt(data);
-      const idxNow = data.findIndex(d => d.time.startsWith(Now.slice(0, 2)));
-      setWattCenter(idxNow !== -1 ? idxNow : Math.floor(data.length / 2));
-    });
-    // console.log("getting db Progrm")
+    fetchWatt(data => {setWatt(data)});
     fetchDbWashingProg(setWash);
     
     const checkConnect = async () =>{
@@ -69,21 +63,43 @@ function Schedule() {
     return () => clearInterval(intervalId);
   }, [selectedDevice]);
 
+  // console.log("temp", temp)
+  const newWatt = temp.map(hour => {
+    let wa = 0;
+    let count = 0;
+    const hourTm = parseInt(hour.time, 10)
+    // console.log("hour", hourTm)
+    for (const val of watt)
+    {
+      const tm = parseInt(val.time, 10)
+      if (tm === hourTm)
+      {
+        wa += val.watt;
+        count ++;
+      }
+      else if (tm > hourTm)
+        break;
+    }
+    if (count === 0) count = 1;
+    return {time : hour.time, watt: Math.round(wa / count), sun : hour.sun};
+  })
+  // console.log(newWatt)
 
   const tempSlice = temp.slice(
     Math.max(0, tempCenter - WIN),
     Math.min(temp.length, tempCenter + WIN + 1)
   );
-  const wattSlice = watt.slice(
-    Math.max(0, wattCenter - WIN * 12),
-    Math.min(watt.length, wattCenter + WIN * 12 + 1)
+  const wattSlice = newWatt.slice(
+    Math.max(0, tempCenter - WIN),
+    Math.min(watt.length, tempCenter + WIN + 1)
   );
+  // console.log("slice", wattSlice, Math.max(0, wattCenter - WIN), Math.min(watt.length, wattCenter + WIN + 1), wattCenter)
 
   const chartData = {
         //title       data          valx      valy              unit               total
     w : {t : "Meteo", d: tempSlice, x:"time", y: "temperature", u:'°'},
-    e : {t : "Electricite des panneaux", d: wattSlice, x:"time", y: "watt", u:'w', tt: watt.total},
-    r : {t : "Rayonnement solaire", d: tempSlice, x:"time", y: "sun", u:'w'}
+    e : {t : "Electricite des panneaux", d: watt, x:"time", y: "watt", u:'w', tt: watt.total},
+    r : {t : "Rayonnement solaire", d: tempSlice, x:"time", y: "sun", u:'w'},
   }
   const c = "#fbbf24"
   
@@ -171,7 +187,17 @@ function Schedule() {
         onCenterChange={setTempCenter} windowSize={WIN}
         label="Météo & Rayonnement"
       />
+      
       <div style={chartDiv}>
+        <MyComposeChart
+        title={"Prévision / Rendement"}
+        data={wattSlice}
+        valx={"time"}
+        valy={{one : "sun", two : "watt"}}
+        sep={true}
+        />
+      </div>
+      {/* <div style={chartDiv}>
         <MyBarChart 
           title={chartData.r.t} 
           data={chartData.r.d} 
@@ -187,7 +213,7 @@ function Schedule() {
           unit={chartData.e.u} 
           color={c} 
           total={chartData.e.tt}/>
-      </div>
+      </div> */}
 
       {(mieleConnected === null) ? (
         <>

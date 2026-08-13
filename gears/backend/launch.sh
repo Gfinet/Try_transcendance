@@ -6,6 +6,8 @@ rm -f package-lock.json
 npm i 
 # npm update
 
+# rm -rf ./src/logs
+
 sleep 5
 npx prisma generate
 npx prisma db push --accept-data-loss

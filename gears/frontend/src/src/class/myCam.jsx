@@ -4,7 +4,11 @@ export function MyCam({source, title})
 		<div style={col}>
 			<p style={titleStyle}>{title}</p>
 			<div style = {styles.cam}>
-				<iframe src={source} style={styles.iframe} allow="autoplay"/>
+				<iframe 
+				src={source} 
+				style={styles.iframe} 
+				allow="autoplay"/> */
+				{/* // allow="autoplay; camera *; microphone *; fullscreen *"/> */}
 			</div>
 		</div>
 	)

@@ -9,7 +9,8 @@ import '../../App.css'
 function Cams()
 {
     const streamGarage  = "/go2rtc/webrtc.html?src=garage&mode=ws";
-    const streamSonette = "/go2rtc/webrtc.html?src=sonette&mode=ws";
+    const streamSonette = "/go2rtc/stream.html?src=sonette&mode=ws";
+    const streamSalon = "/go2rtc/stream.html?src=salon&mode=webrtc";
     const {goToDash} = AppNavigation();
 
     const fenetreRef = useRef(null);
@@ -20,8 +21,11 @@ function Cams()
     return (
         <div style={globalDiv}>
             <div style={camDiv}>
-                <MyCam source={streamGarage} title={"🔴 Garage"}/>
+                <MyCam source={streamSalon} title={"🔴 Salon"}/>
                 <MyCam source={streamSonette} title={"🔴 Sonette"}/>
+            </div>
+            <div style={camDiv}>
+                <MyCam source={streamGarage} title={"🔴 Garage"}/>
             </div>
             <div style={actionDiv}>
                 <button style={greenButton} onClick={showMiniWindow}>Ouvrir la porte</button>

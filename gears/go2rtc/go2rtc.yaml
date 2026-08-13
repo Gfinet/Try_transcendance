@@ -9,9 +9,12 @@ api:
 
 streams:
   sonette: 
-    # - "ezviz://${EMAIL}:${MDP_EMAIL}@${NUM_SERIE}"
     - "rtsp://${USER}:${SONETTE_CODE}@${SONETTE_IP}:${PORT}/h264/ch1/main/av_stream"
-    # - rtsp://host.docker.internal:8554/camera_test
+
   garage:
     - "rtsp://${USER}:${GARAGE_CODE}@${GARAGE_IP}:${PORT}/h264/ch1/main/av_stream"
-    # - - "ffmpeg:camera_parents#audio=opus"
+    # - "isapi://${USER}:${GARAGE_CODE}@${GARAGE_IP}:${PORT}/"
+
+  salon:
+    - "onvif://${USER}:${SALON_CODE}@${SALON_IP}:${SIMI_PORT}?subtype=PROFILE_20047"
+    # - "rtsp://${SIM_USER}:${SALON_CODE}@${SALON_IP}:${PORT}/live/ch0"

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { MyLineChart, MyBarChart, TimeSlider } from '../../class/charts'
+import { MyLineChart, MyBarChart, TimeSlider, MyComposeChart } from '../../class/charts'
 import { Fetches } from '../../models/fetchData';
 // import { WashTable } from '../../models/washTable';
 import { globalDiv, chartDiv } from '../../models/styles';
@@ -11,7 +11,7 @@ function FastMachine ()
 	const [temp, setTemp] = useState([]);
   	const [watt, setWatt] = useState([]);
 
-	const WIN = 4; // ±4 points de chaque côté
+	const WIN = 7; // ±4 points de chaque côté
 	const [center, setCenter] = useState(WIN);
 
 	
@@ -31,15 +31,42 @@ function FastMachine ()
 	// watt a ~12 points par heure, temp a 1 point par heure
 	const RATIO = Math.round(watt.length / temp.length) || 12;
 	const wattCenterIdx = center * RATIO;
-	const wattSlice = watt.slice(
-		Math.max(0, wattCenterIdx - WIN * RATIO),
-		Math.min(watt.length, wattCenterIdx + WIN * RATIO + 1)
-	);
+	
+	
+	// const wattSlice = watt.slice(
+	// 	Math.max(0, wattCenterIdx - WIN * RATIO),
+	// 	Math.min(watt.length, wattCenterIdx + WIN * RATIO + 1)
+	// );
 
-	const tempSlice = temp.slice(
-		Math.max(0, center - WIN),
-		Math.min(temp.length, center + WIN + 1)
-	);
+	// const tempSlice = temp.slice(
+	// 	Math.max(0, center - WIN),
+	// 	Math.min(temp.length, center + WIN + 1)
+	// );
+
+	const newWatt = temp.map(hour => {
+    let wa = 0;
+    let count = 0;
+    const hourTm = parseInt(hour.time, 10)
+    // console.log("hour", hourTm)
+    for (const val of watt)
+    {
+      const tm = parseInt(val.time, 10)
+      if (tm === hourTm)
+      {
+        wa += val.watt;
+        count ++;
+      }
+      else if (tm > hourTm)
+        break;
+    }
+    if (count === 0) count = 1;
+    return {time : hour.time, watt: Math.round(wa / count), prevision : hour.sun};
+  })
+
+	const wSlice = newWatt.slice(
+    Math.max(0, center - WIN),
+    Math.min(watt.length, center + WIN + 1)
+  );;
 
 	const Now = new Date().getHours();
 	const sunStart = temp.findIndex(x => x.sun >= 200);
@@ -51,9 +78,9 @@ function FastMachine ()
 	const c = "#fbbf24"
 	const chartData = {
         //title       data     valx      valy              unit
-    w : {t : "Meteo", d: tempSlice, x:"time", y: "temperature", u:'°'},
-    e : {t : "Electricite des panneaux instantanné", d: wattSlice, x:"time", y: "watt", u:'w'},
-    r : {t : "Rayonnement solaire moyen", d: tempSlice, x:"time", y: "sun", u:'w'}
+    // w : {t : "Meteo", d: tempSlice, x:"time", y: "temperature", u:'°'},
+    // e : {t : "Electricite des panneaux instantanné", d: wattSlice, x:"time", y: "watt", u:'w'},
+    // r : {t : "Rayonnement solaire moyen", d: tempSlice, x:"time", y: "sun", u:'w'}
   	}
 
 	// console.log("W", temp, hourSlice.at(-1), hourSlice)
@@ -67,16 +94,26 @@ function FastMachine ()
 				onCenterChange={setCenter} windowSize={WIN}
 				label="Électricité panneaux"
 			/>
-			
+
 			<div style={chartDiv}>
+				<MyComposeChart
+				title={"Prévision / Rendement"}
+				data={wSlice}
+				valx={"time"}
+				valy={{one : "prevision", two : "watt"}}
+				sep={true}
+				/>
+			</div>
+			
+			{/* <div style={chartDiv}>
 				<MyBarChart  title={chartData.r.t} data={chartData.r.d} valx={chartData.r.x} valy={chartData.r.y} unit={chartData.r.u} color={c} sep={true} />
 				<MyLineChart title={chartData.e.t} data={chartData.e.d} valx={chartData.e.x} valy={chartData.e.y} unit={chartData.e.u} color={c}/>
-			</div>
+			</div> */}
 			{hourSlice.length > 0 ? 
-			(<><h2>Le rayonnement sera suffisant de {hourSlice.at(0).time} à {hourSlice.at(-1).time}</h2>
-				{(Now > parseInt(hourSlice.at(-1).time, 10)) ? 
-				(<h2>L'heure ideale est dans x heure</h2>) :
-				(<h2>L'heure est passee, voyons demain</h2>)
+			(<><h2 style={{color:'white'}}>Le rayonnement sera suffisant de {hourSlice.at(0).time} à {hourSlice.at(-1).time}</h2>
+				{(Now < parseInt(hourSlice.at(-1).time, 10) ) ? 
+				(<h2 style={{color:'white'}}>L'heure ideale est dans x heure {Now}</h2>) :
+				(<h2 style={{color:'white'}}>L'heure est passee, voyons demain {(parseInt(Now,10)) > parseInt(hourSlice.at(-1).time, 10) ? "oui" : "non"}</h2>)
 				}
 			</>) : 
 			(<h2>le rayonnement ne sera pas suffisant aujourd'hui</h2>)

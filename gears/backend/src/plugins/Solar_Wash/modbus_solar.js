@@ -79,7 +79,7 @@ export default async function modbusPlugin(server)
     }
     const task = cron.schedule('*/5 * * * *', async () => {
         fetchSolarData(server).catch(err => server.writeLogs(["Error"], 'Fetch solaire échoué:', err.cause.message));
-    })
+    }, {logger: server.cronLogger})
     server.addHook('onClose', (instance, done) => {
         task.stop();
         done();

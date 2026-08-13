@@ -17,10 +17,25 @@ const BASE_ARGS_CLOUD = [
   '--ip',     process.env.CLIM_IP,
 ];
 
+const formatCliError = (rawError) => {
+  if (!rawError) return 'Erreur CLI inconnue';
+  
+  const lines = rawError.trim().split('\n').filter(line => line.trim().length > 0);
+  const lastLine = lines[lines.length - 1] || rawError;
+  const cleanMessage = lastLine.includes(':') 
+    ? lastLine.split(':').slice(1).join(':').trim() 
+    : lastLine.trim();
+
+  return cleanMessage || 'Erreur de connexion à la climatisation';
+};
+
 const runCli = (subcommand, extraArgs = []) => {
 	return new Promise((resolve, reject) => {
 		execFile(CLI, [subcommand, ...BASE_ARGS_LOCAL, ...extraArgs], (err, stdout, stderr) => {
-		if (err) return reject(new Error(stderr || err.message));
+		if (err) {
+      const conciseError = formatCliError(stderr || err.message);
+      return reject(new Error(conciseError));
+    }
 		resolve(stdout);
 		});
 	});
@@ -30,6 +45,7 @@ const runCli = (subcommand, extraArgs = []) => {
 
 // Parse la sortie texte en objet
 const parseStatus = (raw) => {
+  console.log("raw", raw)
   const result = {};
   for (const line of raw.split('\n')) {
     const match = line.match(/^\s{2}(\w+)\s+=\s+(.+)$/);
@@ -49,5 +65,5 @@ export default fp(async (server) => {
 
   server.clim.getStatus()
     .then(s => server.writeLogs(["Server"],'Clim connectée:', s.name, '| temp:', s.indoor, '°C'))
-    .catch(err => console.warn('Clim inaccessible au démarrage:', err.message));
+    .catch(err => server.writeLogs(["Server", "Error"], 'Clim inaccessible au démarrage:', err.message));
 });

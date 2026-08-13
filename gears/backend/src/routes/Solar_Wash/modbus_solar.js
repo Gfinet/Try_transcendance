@@ -17,7 +17,7 @@ export default async function modbus(server)
         }
         catch (err)
         {
-            server.writeLog(server.logFd["Error"], "erreur :", err)
+            server.writeLogs(["Error"], "erreur :", err)
             return {success : false, message: 0}
         }
     });
@@ -28,10 +28,13 @@ export default async function modbus(server)
         server.writeLogs(["Request", "Server"], request.user.name, "GET /mbtoday")
         try {
             const now = new Date()
-            const start = new Date(now.getTime() - (24 * 60 * 60 * 1000))
-            // start.setHours(21, 59, 59, 999);
+            const start = new Date(now.getTime() - (24 * 60 * 60 * 1000)) //24h
+            const newStart = new Date() //24h
+            newStart.setHours(0)
+            newStart.setMinutes(0)
+            newStart.setMilliseconds(0)
 
-            const today = await server.prisma.Solar_Data.findMany({ where: { hour: {gte : start, lte: now}}, orderBy: {hour: 'asc'}})
+            const today = await server.prisma.Solar_Data.findMany({ where: { hour: {gte : newStart, lte: now}}, orderBy: {hour: 'asc'}})
             // console.log("Waza",start, end, today)
             const sec = today.map((record, index) => {
                 return {
@@ -45,7 +48,7 @@ export default async function modbus(server)
             return {success : true, message: sec}
         } 
         catch (error) {
-            server.writeLog(server.logFd["Error"], "erreur :", err)
+            server.writeLogs(["Error"], "erreur :", err)
             return {success : false, message: 0}
         }
     })

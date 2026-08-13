@@ -9,6 +9,7 @@ import weather from './plugins/Solar_Wash/weather.js'
 import clim from './plugins/Clim/ClimHandler.js'
 import jwt from './plugins/jwt_auth.js'
 import webpush from './plugins/web-push.js'
+// import MyQ from './plugins/Door_Cams/garageHandler.js'
 // import ezviz from './plugins/Door_Cams/ezviz_cam.js'
 
 import fs from 'fs'; //Logs
@@ -37,7 +38,7 @@ const serverOn = async () => {
 
 
 
-	const logsFile = ["Server.log", "Prisma.log", "Miele.log", "Request.log", "Error.log", "Test.log"]
+	const logsFile = ["Server.log", "Prisma.log", "Miele.log", "Request.log", "Error.log", "Test.log", "Cron.log"]
 	const logsFd = Object.fromEntries(
 		logsFile.map(name => [name.slice(0, -4), fs.openSync(path.join(process.cwd(), 'src', 'logs', name), 'a')]))
 	const logsDir = path.join(process.cwd(), 'src', 'logs');
@@ -45,6 +46,7 @@ const serverOn = async () => {
 	
 	server.decorate('logFd', logsFd);
 	// console.log(server.logFd)
+
 
 	server.decorate('writeLogs', (fds, ...args) => {
 		fds.forEach(fd => {
@@ -59,6 +61,12 @@ const serverOn = async () => {
 			const errPut = `[${timestamp}] ${errMsg}\n`;
 			fs.writeSync(server.logFd["Error"], errPut);
 	}})})
+	const cronLogger = {
+		info: (msg) => server.writeLogs(["Cron", "Server"], `[INFO] - ${msg}\n`),
+		warn: (msg) => server.writeLogs(["Cron", "Error"], `[WARN] - ${msg}\n`),
+		error: (msg) => server.writeLogs(["Cron", "Error"], `[ERROR] - ${msg}\n`),
+	};
+	server.decorate("cronLogger", cronLogger)
 
 	server.register(fastifyJwt, {secret: process.env.JWT_SECRET });
 
@@ -69,7 +77,7 @@ const serverOn = async () => {
 
 	const sendNotif = async (server) => {
 		// console.log("Notifs?", server.hasPendingNotifs)
-		if (!server.hasPendingNotifs) return;
+		// if (!server.hasPendingNotifs) return;
 		const notifs = await server.prisma.pushNotif.findMany({where : {sendAt : {lte : new Date()}}})
 		for (const one of notifs)
 		{
@@ -88,7 +96,7 @@ const serverOn = async () => {
 
 	const launchWash = async (server) => {
 		// console.log("Programs?", server.hasPendingPrgm)
-		if (!server.hasPendingPrgm) {server.writeLogs(["Test"], "noprgm"); return;}
+		// if (!server.hasPendingPrgm) {server.writeLogs(["Test"], "noprgm"); return;}
 		const prgm = await server.prisma.washing_Program.findFirst({
 			where : {startAt: {lte: new Date()}, finished : "En attente"},
 			orderBy: {createdAt: 'desc'},
@@ -96,7 +104,7 @@ const serverOn = async () => {
 		if (prgm)
 		{
 			const tokenData = await server.miele.getToken(prgm.authorId, server)
-			console.log("rep", prgm.deviceId, tokenData, prgm.type)
+			// console.log("rep", prgm.deviceId, tokenData, prgm.type)
 			const rep = await fetch(`https://api.mcs3.miele.com/v1/devices/${prgm.deviceId}/programs`, {
 				method: 'PUT',
 				headers: {
@@ -117,6 +125,7 @@ const serverOn = async () => {
 					data : { finished : "En cours"}
 				})
 			}
+			else server.sendNotif(4)
 		}
 		const check = await server.prisma.washing_Program.findMany({where : {finished : "En attente"}});
 		if (check.length == 0) server.hasPendingPrgm = false;
@@ -127,7 +136,7 @@ const serverOn = async () => {
 	const repeatTask = cron.schedule("* * * * *", async () => {
 		await sendNotif(server);
 		await launchWash(server);
-	}, {scheduled: true, timezone: "Europe/Paris"})
+	}, {scheduled: true, timezone: "Europe/Paris", logger: cronLogger})
 
 	server.addHook('onClose', (instance, done) => {
         repeatTask.stop();

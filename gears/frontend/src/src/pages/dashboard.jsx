@@ -6,6 +6,8 @@ import { Fetches } from '../models/fetchData';
 import { blueButton, greyButton, rowDiv, globalDiv } from '../models/styles';
 import { PushButton } from '../class/pushButton';
 
+import {jwtDecode} from 'jwt-decode'
+
 import '../App.css'
 
 function Dashboard() {
@@ -14,6 +16,11 @@ function Dashboard() {
 
   const [temp, setTemp] = useState([]);
   const [clim, setClim] = useState({});
+
+  const token = localStorage.getItem('token');
+  const decoded = jwtDecode(token);
+  const userLogin = decoded.name;
+  
 
   useEffect(() => {
     fetchTemp(setTemp);
@@ -25,7 +32,7 @@ function Dashboard() {
   return (
     <div style={{...globalDiv, gap:'0.5rem'}}>
       <PushButton/>
-      <h1 style={{color:'white'}}>Bienvenue sur l'espace Parents</h1>
+      <h1 style={{color:'white', alignContent : 'space-between'}}>Bienvenue sur l'espace {userLogin}</h1>
       <MyBarChart data={temp} valx="time" valy="temperature" color="#fbbf24" unit='°' sep={true} title={"Prévisions météo"}/>
       <ClimPannel data={clim} setClim={setClim} clim={clim}/>
       <div style={tableDiv}>

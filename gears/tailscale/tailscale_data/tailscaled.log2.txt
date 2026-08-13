@@ -1,4 +1,0 @@
-{"logtail":{"client_time":"2026-08-09T01:21:32.909436042Z","proc_id":1786190174,"proc_seq":2454},"metrics":"I0402I0602I0802I0a02I0e06I1006I1c02I1e02I3a10I220cI2c02I2e02I400eI440eI4810I4c0eI508034I54e024I561cI581cI5a0eI5c0eI5e1cI620eI640e","v":1,"text":"Accept: TCP{100.117.170.119:52824 > 100.86.53.87:443} 907 tcp non-syn\n"}
-{"logtail":{"client_time":"2026-08-09T01:21:32.911942375Z","proc_id":1786190174,"proc_seq":2455},"v":2,"text":"wg: [U0Qo5] - Received handshake initiation\n"}
-{"logtail":{"client_time":"2026-08-09T01:21:32.912177875Z","proc_id":1786190174,"proc_seq":2456},"v":2,"text":"wg: [U0Qo5] - Sending handshake response\n"}
-{"logtail":{"client_time":"2026-08-09T01:21:32.914927209Z","proc_id":1786190174,"proc_seq":2457},"v":2,"text":"wg: [U0Qo5] - Receiving keepalive packet\n"}
